@@ -1,0 +1,5 @@
+= Matlab String =
+
+sprintf('%d is xxx', i);
+
+['gjsl', 'gjls', 'gjsl'] equals to strcat('gjsl', 'gjs', 'gjsl'), but the former can retain the space in the end of each item.

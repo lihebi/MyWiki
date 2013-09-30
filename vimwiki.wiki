@@ -1,0 +1,13 @@
+use the followoing command in vim's normal mode to start:
+	* `<leader>ww` to start with index.wiki
+	* `<leader>wt` to start with a new tag
+	* `<leader>w<leader>w` to start today's diary
+	* `<leader>wr` to rename the current page, and update it in all the wiki pages
+	
+In vim, use <tab> to move with wikitag, use <enter> to follow, use <back> to back
+
+use `:vimwiki2html` and `:vimwikiall2html` to create the html page
+
+you would want to see:
+	* [[a special page]]
+	* [[TODO List]]

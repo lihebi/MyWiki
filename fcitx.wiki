@@ -1,0 +1,16 @@
+= Fcitx =
+
+== Install ==
+`sudo pacman -S fcitx fcitx-gtk2 fcitx-gtk3 fcitx-qt`
+`sudo pacman -S fcitx-configtool`
+
+== Configure ==
+add in ~/.xinitrc
+{{{
+export LANG='zh_CN.UTF-8'
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+fcitx&
+}}}
+than just use the icon and configtool

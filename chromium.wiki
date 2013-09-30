@@ -1,0 +1,16 @@
+= Chromium =
+
+== Proxy ==
+chromium can not set proxy itself, and can not use add-ons to manage it.<br>
+So, use the following method:<br>
+* write a pac configure file: proxy.pac for example
+{{{javascript
+	function FindProxyForURL(url, host) {
+		...
+		return 'PROXY 127.0.0.1:8087;DIRECT';
+	}
+}}}
+* start chromium with options:
+`chromium --proxy-server=localhost:8087 --proxy-pac-url=file:/home/hebi/proxy.pac`
+* to reload pac file, go to link:
+`chrome://net-internals/#proxy`

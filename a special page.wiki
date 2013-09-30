@@ -1,0 +1,38 @@
+= a special page =
+*bold*<br/>
+_italic_<br/>
+WikiWord -- camel word, link to WikiWord (However I can't know what is it)<br/>
+_Unfortunately, I have to add 'br' myself to make the html have it._<br/>
+
+* bullet item
+* item2
+* item3
+
+# numbered list item
+# item2
+
+- another list type
+- type2
+- type3
+
+= Header 1 =
+== Header 2 ==
+=== Header 3 ===
+ ==== Header 4 in the medial ====
+~~text with delete line~~
+`code goes here`
+A^up note script^
+B,,down note script,,
+
+
+The table is great, just type `:vimwikitable`, and you can get a convenient table
+can also use <tab>
+| id | name    | star   | point | num   |
+|----|---------|--------|-------|-------|
+| 1  | starwar | lihebi | 9.9   | 10000 |
+| 2  | xxx     | xxx    | xxx   | xxx   |
+|    |         |        |       |       |
+
+*some tips:*
+	# directly type '=' in normal mode to increase header level, use '-' to decrease it.
+	# http://vim-script-cn.googlecode.com/svn/trunk/doc/vimwiki.cnx

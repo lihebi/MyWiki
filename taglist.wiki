@@ -1,0 +1,13 @@
+= taglist =
+
+This is a tab view of the tags of the file. Work with ctags.
+
+*Install*
+	* install ctags
+	* install taglist
+	* add the following into .vimrc to specify:
+		`let Tlist_Show_One_File = 1`
+		`let Tlist_Exit_OnlyWindow = 1`
+		`let Tlist_Use_Right_Window = 1`
+*Usage*
+	* type `:TlistToggle`

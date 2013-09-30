@@ -1,0 +1,23 @@
+= Matlab =
+
+== Topics ==
+* [[matlab file operate]]
+* [[matlab string]]
+* [[MySQL]]
+
+== Use Matlab Engine In C ==
+* create symul links with libeng and libmx
+* use the -lmx -leng -I -L ... to compile
+* add /bin/glnx86 to /etc/ld.xx.conf and than ldconf to gen lib.so
+* install /bin/csh
+
+== 中文乱码 ==
+mkdir $MATLAB_DIR/sys/java/jre/glnx86/jre/lib/fonts/fallback
+cp xxx.ttc xxxxx/fallback/
+cd xxxxx/fallback
+mkfontscale
+mkfontdir
+
+for example, wqy-microhei.ttc
+
+and set the fileencoding to utf8

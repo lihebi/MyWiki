@@ -1,0 +1,11 @@
+= Goagent =
+Actually I can install goagent with pacman.<br>
+== Install ==
+`pacman -S goagent`
+== Usage ==
+`sudo systemctl start goagent`
+`sudo systemctl stop goagent`
+== Server ==
+`sudo python2 uploader.zip`
+== Configure ==
+/usr/share/goagent/local/

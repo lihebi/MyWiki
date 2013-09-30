@@ -1,0 +1,12 @@
+= pydiction =
+
+*install*
+	* 把python_pydiction.vim放到~/.vim/after/ftplugin/中
+	* 把complete-dict, pydiction.py 放到~/.vim/files/中
+	* 在.vimrc中添加:
+		`filetype plugin on`
+		`let g:pydiction_location = '/home/hebi/.vim/files/complete-dict'`
+	* 可以使用pydiction.py 来生成字典文件:
+		`python2 pydiction.py <module>`
+*use*
+	* 直接按tab键就行

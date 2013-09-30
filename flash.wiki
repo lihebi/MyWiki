@@ -1,0 +1,14 @@
+= Flashplugin for Browser =
+
+pacman -S flashplugin
+
+put libflashplayer.so in:
+* /usr/lib/chromium/plugins/
+* /usr/lib/mozilla/plugins/
+
+
+== chromium ==
+* chromium can use the plugins in firefox or some other folder.
+* configure use or stop in chrome://plugins
+* Two versions of flashplugins, the adobe plugin( which is no longer supported) and the pepper plugin used by chromium only. Download it at aur, chromium-pepper-flash-stable.
+* Different website use different versions.

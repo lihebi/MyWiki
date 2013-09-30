@@ -1,0 +1,7 @@
+= Pickle =
+
+{{{python
+import pickle
+pickle.dump(obj, open('out.pickle', 'wb'))
+obj = pickle.load(open('in.pickle', 'rb'))
+}}}

@@ -1,0 +1,19 @@
+= Awesome =
+
+Awesome is a window manager.
+
+=== 快捷键 ===
+* win+ctrl+r ---> reload rc.lua
+* win+shift+q ---> quit
+* win+shift+r ---> restart awesome
+* win+esc ---> change between the latest two tab
+* win+enter ---> terminal
+* win+j/k ---> focus on another window
+* win+shift+j/k ---> exchange two window
+* win+space ---> change layout
+* win+tab ---> focus between the latest two window
+* win+shift+[num] ---> send the window to tab[num]
+* win+h/l ---> change size of the windows
+* win+m/n ---> max,min the window
+* win+[num] ---> go to tab[num]
+* win+r ---> run a commandline

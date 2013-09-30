@@ -1,0 +1,3 @@
+= luit =
+
+luit -encoding gbk telnet bbs.ustc.edu.cn

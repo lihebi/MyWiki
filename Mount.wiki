@@ -1,0 +1,10 @@
+= Mount =
+
+* mount /
+	`mount /dev/sda5 /mnt`
+* mount home,var,boot
+	`cd /mnt`
+	`mkdir home,var,boot`
+	`mount /dev/sdaX ./home`
+	`mount /dev/sdaX ./boot`
+	`mount /dev/sdaX ./var`

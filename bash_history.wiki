@@ -1,0 +1,9 @@
+= Bash History =
+
+put this into ~/.bashrc:<br>
+{{{bash
+export HISTCONTROL=erasedups
+export HISTFILESIZE=100000000
+export HISTSIZE=1000000
+shopt -s histappend
+}}}

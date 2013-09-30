@@ -1,0 +1,41 @@
+= Linux =
+
+== [[Command]] ==
+
+== Configure ==
+* [[bash_history]]
+
+== Gentoo ==
+* [[Install_of Gentoo]]
+
+== ArchLinux ==
+* [[Install of Arch]]
+
+== freeshell @ USTC ==
+* ssh -p 10352 root@114.214.197.8
+
+== Software ==
+* Install Method:
+	- pacman
+	- yaourt
+* softwares list
+	- scrot: PrintScreen
+	- [[awesome]]
+	- zhcon: a CJK console client
+	- w3m console browser harmony with Chinese
+	- [[goagent]]
+	- [[fcitx]]
+	- scrot: usage: `scrot -s`
+	- mirage: Picture Viewer
+	- [[systemctl]]
+	- xprop
+	- xmessage
+	- foxitreader
+	- xpdf
+	- xclip, xsel
+	- gbkunzip
+== Topics ==
+* [[flash|flashplugin for browser]]
+* [[zimu coding error for movies]]
+* [[matlab]]
+* [[luit]]

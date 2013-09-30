@@ -1,0 +1,11 @@
+= Swap =
+
+* `mkswap /dev/sda6`
+* `swapon /dev/sda6`
+* swap to be used at boot:
+	add this line into /etc/fstab
+	`/dev/sda6 none swap defaults 0 0`
+* check swap partition:
+	`swapon -s`
+	or
+	`free -m`

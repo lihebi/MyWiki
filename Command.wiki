@@ -1,0 +1,18 @@
+= Command =
+
+
+| 命令名    | 作用           | 用法 | 示例                                    | 备注                                   |
+|-----------|----------------|------|-----------------------------------------|----------------------------------------|
+| sudo      |                |      |                                         | 配置方法:                              |
+|           |                |      |                                         | `export SUDO_USER=hebi`                |
+|           |                |      |                                         | /etc/sudousr>>hebi ALL(ALL)ALL         |
+| cdrecord  |                |      | cdrecord -v -eject speed=2 xxx.iso      |                                        |
+| makepkg   |                | -s   | makepkg -s                              | than pacman -U xxx.pkg.tar.xz          |
+| pkill     | 关闭X          |      | pkill x                                 |                                        |
+| dumpkeys  | 打印当前keymap |      | dumpkeys > mykeymap                     | 运行zhcon后不能使用                    |
+| loadkeys  | load一个keymap |      | loadkeys mykeymap                       | 修改mykeymap,可实现终端改键            |
+| xmodmap   | X11下改键      |      | xmodmap -e "keysym Caps_Lock = Shift_L" | .xinitrc, /usr/include/X11/keymapdef.h |
+| split     |                |      | split -b 1m filename output_prefix      |                                        |
+| cat       |                |      | cat smallfile* > largefilename          |                                        |
+| man ascii |                |      |                                         |                                        |
+

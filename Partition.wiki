@@ -1,0 +1,19 @@
+= Partition =
+
+* steps:
+	* use cfdisk to create partions, can also use fdisk:
+		`cfdisk`
+		`fdisk`
+		`fdisk -l`
+	* format:
+		`mkfs.ext4 /dev/sda1`
+	* see what have done:
+		`lsblk`
+* my current partition:
+	* /	sda5	60G
+	* /var	sda6	60G
+	* /boot	sda1	200M
+	* /home	sda7	230G
+* see also
+	* gpt
+	* [[swap]]

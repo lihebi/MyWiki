@@ -1,0 +1,11 @@
+= Installation of grub =
+
+* `pacman -S grub-bios`
+* `grub-install --target=i386-pc --recheck /dev/sda`
+* `cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo`
+* search for other os:
+	`grub-mkconfig -o /boot/grub/grub.cfg`
+* syslinux: a substitute
+	`pacman -S syslinux`
+	`syslinux-install_update -i -a -m`
+	`vi /boot/syslinux/syslinux.cfg` _modefy: LABEL arch ... APPENO root=/dev/sda8 ro_

@@ -1,0 +1,9 @@
+= fstab =
+
+
+| 设备路径   | 挂载点     | 文件系统 | 挂载选项         | dump | 非正常关机检查 |
+|------------|------------|----------|------------------|------|----------------|
+| /dev/sda1  | /boot      | ext2     | defaults,noatime | 1    | 2              |
+| /dev/sda2  | none       | swap     | sw               | 0    | 0              |
+| /dev/sda3  | /          | ext3     | noatime          | 0    | 1              |
+| /dev/cdrom | /mnt/cdrom | auto     | noauto,user      | 0    | 0              |

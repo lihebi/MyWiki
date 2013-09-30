@@ -1,0 +1,4 @@
+= Matlab File Operate =
+
+fp = fopen('xxx', 'w');
+fprintf(fp, 'xxX%d, %f, %s', i, j, k);

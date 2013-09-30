@@ -1,0 +1,3 @@
+= Termcolor =
+
+`termcolor.colored('this is a colored string','white','on_red')`

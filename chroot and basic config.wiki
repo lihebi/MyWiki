@@ -1,0 +1,34 @@
+= Chroot and basic cofig =
+
+* chroot
+	`arch-chroot /mnt`
+* config
+	* hostname( write host name in it. For example, hebi_host)
+		`vi /etc/hostname`
+		or
+		`echo hebi_host > /etc/hostname`
+	* localtime
+		`ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`
+	* locate
+		`vi /etc/locate.gen`
+		remove '#' before *en-US.UTF-8 UTF-8* and *de-DE.UTF8 UTF-8*
+		`echo LANG=en_US.UTF-8 > /etc/locale.conf`
+		`export LANG=en_US.UTF-8`
+	* time zone
+		`hwclock --systohc --utc`
+	* auto wired
+		`pacman -S ifplugd`
+		`cd /etc/network.d`
+		`ln -s examples/ethernet_dhcp`
+		`systemctl enable net-auto-wired.service`
+	* auto wifi
+		`pacman -S wireless_tools wpa_supplicant wpa_actiond dialog`
+		`wifi-menu`
+		`systemctl enable net-auto-wireless.service`
+		`vi /etc/conf.d netcfg`
+	* mkinitcpio
+		`mkinitcpio -p linux`
+	* user and passwd
+		`passwd`
+		`useradd -m -g users -G wheel,storage,power -s /bin/bash hebi`
+		`passwd hebi`

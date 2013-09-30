@@ -1,0 +1,10 @@
+= Opencv =
+
+== C ==
+=== install ===
+* pacman
+=== use ===
+{{{gcc
+g++ `pkg-config --cflags --libs opencv` xxx.cpp
+}}}
+or use [[makefile]]

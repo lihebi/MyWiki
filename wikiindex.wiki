@@ -1,0 +1,33 @@
+= Welcome to Hebi's Personal Wiki! =
+	Here to my [[index|Home Page]]
+
+%title Hebi's wiki
+== Motto ==
+_Keep Coding and Carry On._
+
+_Later Equals Never._
+
+_Hope is not Plan._
+----
+== Description ==
+This wiki is used to record some knowledges that I have learned to keep it in memory.<br>
+----
+== Knowledges: ==
+	* [[vim]]
+	* [[SQL]]
+	* [[linux]]
+	* [[python]]
+	* [[c]]
+	* [[unicode]]
+	* [[chromium]]
+	* [[matlab]]
+----
+Links below are my personal records.
+
+== Useful Links ==
+[[http://home.ustc.edu.cn/~lihebi/file|files]] [[js/ruler|Ruler]] [[http://localhost:8000|localhost]]
+[[http://localhost:8000/cgi-bin/script.cgi|cgi]]
+| [[js/clock|DSPClock]]        | [[http://www.baidu.com|Baidu]] | [[http://www.ustc.edu.cn|USTC]] | [[http://www.gentoo.org|Gentoo]] |
+| [[http://google.com|Google]] | [[http://bt.neu6.edu.cn|neu6]] | [[http://wlt.ustc.edu.cn|WLT]]  |                                  |
+
+=== [[ThingList]] ===

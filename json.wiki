@@ -1,0 +1,8 @@
+= Json =
+
+* python_code
+	`import json`
+	`j = json.loads(open('in.json').read())`
+	`j['xxx']['xxx']`
+	`j = json.loads(<str>)`
+	`s = json.dumps(<str>)`

@@ -1,0 +1,8 @@
+= Install Base =
+
+* put the fastest source on the top
+	`vi /etc/pacman.d/mirrorlist`
+* install
+	`pacstrap -i /mnt base base-devel`
+* genfstab
+	`genfstab -p /mnt >> /mnt/etc/fstab`

@@ -1,0 +1,13 @@
+= More About Me And My Life =
+
+* I am a confident man with a strong desire to make things excellent if I would like it to be so.
+* I am a geek, I think, insterested about things like linux and google glass.
+--------------------------------------------------
+* I love coding. I'm extreme about a great code. I get excited when I am learning a new program language.
+* I love new tech. I use google reader to keep on with my favorite blogs. I always keep a look at news about google, apple, netflix, hulu and so on.<br>
+* I love linux. I want to work on a most freedom and most comfortable platform.<br>
+* I love big data. I am eager to find out the regular pattern in data.<br>
+* I love internet. I think the protocols like TCP/IP is an amazing invention.
+* I love sports, I love running, I love muscle.
+--------------------------------------------------
+* I use scripts to make my life efficient.

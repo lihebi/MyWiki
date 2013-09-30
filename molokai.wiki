@@ -1,0 +1,8 @@
+= molokai=
+
+This is a colorscheme. Pretty beautiful, and comfortable.
+
+*Usage*
+	* put molokai.vim into ~/.vim/colors/
+	* add into .vimrc:
+		`colorscheme molokai`

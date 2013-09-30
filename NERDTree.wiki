@@ -1,0 +1,7 @@
+= NERDTree =
+
+This is a file browser.
+
+*Usage*
+	* to start:
+		`:NERDTree`

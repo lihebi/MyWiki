@@ -1,0 +1,25 @@
+= Unicode =
+
+This page talks about my comprehension of Unicode use in python.<br>
+
+== 概述 ==
+* Unicode是字符串，可以表示任意字符
+* 在文本和socket等中，使用的是字节串
+* 字节串--->Unicode: decode
+* Unicode--->字节串: encode
+* 编码方式有: utf8, gb2312, latin, ascii等。
+== python相关 ==
+`a = u'xxxxx'	#Unicode`
+`b = a.encode('utf8')	#utf8`
+`c = b.decode('utf8')`
+`a == c	#True`
+
+{{{python
+reload(sys)
+sys.setdefaultencoding('utf-8')	#所有字节串的默认 *解码*  方式。但是会把编码方式也设置成utf8, 故需与下面代码连用
+}}}
+
+`sys.stdout = codecs.lookup('gb2312')[-1](sys.stdout)	#print显示的终端编码`
+
+* 暂时不知道#coding=utf-8有什么用
+* 默认解码ascii, 默认编码为系统当前环境

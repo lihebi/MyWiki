@@ -1,0 +1,44 @@
+= vim =
+
+This page talked about some usage about vim.
+* 一些常用指令
+	- /find 之后按	n ---> to next	N ---> to former
+	- :n,$s/str1/str2/g
+
+* *conceal text*:
+	- write a file named conceal.vim with the following:
+		`sy match test_conceal "some_text_include_re" conceal`
+		`cole=2`
+	- open another file, type:
+		`:so conceal.vim`
+* *set rnu*
+	- type:
+		`:set rnu`
+		`:set nornu`
+		`:set nu`
+		`:set nonu`
+* *colorcolumn*
+	- type:
+		`:set cc=10,20,30`
+* 一些专题
+	- [[fold]]
+	- [[clipboard]]
+
+
+* *一些使用到的插件*
+	- [[vimwiki]]
+	- [[pydiction]]
+	- [[molokai]]
+	- [[NERDTree]]
+	- [[taglist]]
+	- [[vimim]]
+
+* *map*
+	- use `:help map` for whole help
+	- add into .vimrc `let mapleader = ';'` to specify a mapleader, by default it is '\'
+	- there are many types: *nmap*, *imap*, etc. See them in :help
+	- some examples:
+		`nmap <silent><leader>l :TlistToggle<cr>`
+		`nmap <leader>j <C-W>w`
+		`nmap <leader>q :q<cr>`
+		`imap <F3> <C-^>`

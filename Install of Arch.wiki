@@ -1,0 +1,12 @@
+= Install of Arch =
+
+* A little thing about [[Windows]]
+* [[Partition]]
+* [[Mount]]
+* [[Install base]]
+* [[chroot and basic config]]
+* [[grub]]
+* unmount
+	umount var,home,boot,mnt, restart
+* [[X window]]
+

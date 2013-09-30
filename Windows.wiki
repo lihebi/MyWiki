@@ -1,0 +1,17 @@
+= A little thing about Windows =
+
+* Windows&Arch dual boot
+	edit /etc/grub.d/40-custom
+	{{{
+	menuentry "Window 8" {
+		set root=(hd0,2)
+		chainloader (hd0,2)+1
+	}
+	}}}
+	than:
+		`grub-mkconfig -o /boot/grub/grub.cfg`
+* install cygwin in windows
+	- run setup can install or update
+	- to use g++, choose devel:gcc-g++
+	- to use win32lib, choose libs:win32api
+	- to use vim, search vim and install

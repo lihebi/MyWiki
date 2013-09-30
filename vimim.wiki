@@ -1,0 +1,11 @@
+= vimim =
+
+Input Chinese just in vim, without calling up the fcitx (actually i can not call it out!).<br>
+Also, it can connect to 云词库: QQ, Baidu, 搜狗,...<br>
+
+*Install*
+	* copy
+*Usage*
+	* In insert mode, input the pinyin, than <C-^>
+	* It is recommand to add the mapping: 
+		`imap <F3> <C-^>`

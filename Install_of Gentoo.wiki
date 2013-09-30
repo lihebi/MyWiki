@@ -1,0 +1,70 @@
+= Install of Gentoo =
+
+* 下载
+	下载releases/amd64/autobuilds/current-iso/目录里的install-amd64-minimal-<release>.iso 刻录
+	下载releases/amd64/autobuilds/目录里的stage3-amd64-<release>.tar.bz2
+	下载snapshots/里的portage-latest.tar.bz2
+* 格式化
+	`mke2fs -j /dev/sda2`	#ext3	/
+	`mke2fs /dev/sda1`	#ext2	boot
+* 挂载到/mnt/gentoo/,解压stage3 和portage:
+	`tar xvjpf stage3.tar.bz2`	#到/
+	`tar xvjf portage-latest.tar.bz2 -C /mnt/gentoo/usr`
+* mirrorselect
+	`mirrorselect -i -o >> /mnt/gentoo/etc/make.conf`
+	`mirrorselect -i -r -o >> /mnt/gentoo/etc/make.conf`
+* Copy DNS, mount /proc/ /dev
+	`cp -L /etc/resolv.conf /mnt/gentoo/etc/`
+	`mount -t proc none /mnt/gentoo/proc`
+	`mount -o bind /dev /mnt/gentoo/dev`
+* chroot
+	`chroot /mnt/gentoo /bin/bash`
+	`env-update`
+	`source /etc/profile`
+	`export PS1="(chroot) $PS1"`
+* 配置
+	`emerge --sync`
+	`nano -w /etc/locale.gen`
+	`locale-gen`
+	`cp /usr/share/zoneinfo/Asian/Shanghai /etc/localtime`
+* 编译内核
+	`emerge gentoo-sources`
+		- Ext3 journalling file system support
+		- Device Drivers->Generic Drivers Option->Maintain a devtmpfs ...
+	在/usr/src/linux 中:
+	`make menuconfig`
+	`make && make modules_install`
+	`cp arch/x86_64/boot/bzImage /boot/lihebi-3.8.13-gentoo`
+* 配置
+	[[fstab]]
+	在/etc/conf.d/net 中加入: `config_eth0=("dhcp")`
+	`rc-update add net.eth0 default`	#开机自动启用网络
+	`passwd`
+* 安装工具软件
+	`emerge syslog-ng`	#系统日志工具
+	`rc-update add syslog-ng default`
+	`emerge vixie-cron`	#Cron 守护进程
+	`rc-update add vixie-cron default`
+	`emerge dhcpcd`
+* grub
+	`emerge grub`
+	创建/boot/grub/grub.conf:
+		{{{
+	default 0
+	timeout 30
+	#splashimage=(hd0,0)/boot/grub/splash.xpm.gz
+
+	title Archlinux
+	root (hd0,0)
+	kernel /vmlinuz-linux root=/dev/sda5
+	initrd /initramfs-linux.img
+	
+	title Gentoo Linux 3.8.13
+	root (hd0,1)
+	kernel /boot/lihebi-3.8.13-gentoo root=/dev/sda2
+	}}}
+	`grep -v rootfs /proc/mounts > /etc/mtab`
+	`grub-install --no-floppy /dev/sda`
+* end
+	`useradd -m -G users,wheel,audio -s /bin/bash hebi`
+	`passwd hebi`

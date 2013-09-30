@@ -1,0 +1,6 @@
+= Makefile =
+
+{{{makefile
+a.out: xxx.cpp
+	g++ -o a.out xxx.cpp
+}}}

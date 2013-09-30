@@ -1,0 +1,18 @@
+= Python =
+
+== 技巧 ==
+* `for line in open('xxx.txt'):`
+* `l = sorted(d.items(), key=lambda d: d[1])	# 按value排序，返回list`
+
+== standard libraries ==
+* [[re]]
+* [[optparse]]
+* [[subprocess]]
+* [[pickle]]
+
+== libraries ==
+* [[termcolor]]
+* [[json]]
+
+== Topics ==
+* [[sys.path]]

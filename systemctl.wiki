@@ -1,0 +1,25 @@
+= Systemctl =
+
+这是一个系统自带的命令。<br>
+
+* start a service:
+	`systemctl start mysqld.service`
+* stop a service:
+	`systemctl stop mysqld.service`
+* set start when computer starts:
+	`systemctl enable mysqld.service`
+* diable auto-start:
+	`systemctl disable mysqld.service`
+* restart a service:
+	`systemctl restart mysqld.service`
+* check the status of a service:
+	`systemctl status mysqld.service`
+* see all the services that started:
+	`systemctl list-units --type=service`
+
+== Services ==
+* dhcpcd
+* mysqld
+* goagent
+
+加不加.service貌似无所谓

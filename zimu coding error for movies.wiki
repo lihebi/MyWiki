@@ -1,0 +1,7 @@
+= Zimu Coding Error =
+
+== for smplayer ==
+GUI options
+
+== for mplayer ==
+use `-subcp gbk`
