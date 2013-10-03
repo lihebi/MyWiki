@@ -1,74 +1,33 @@
-	= Hebi Li =
-----
-%toc
-%title Hebi's Personal Website
-== Introduction ==
-    I'm Hebi Li, and this is *my personal website*.
+= Welcome to Hebi's Personal Wiki! =
+{{http://www.catb.org/hacker-emblem/glider.png|icon}}
+%title Hebi's wiki
+== Motto ==
+_Keep Coding and Carry On._
 
-    I'm currently a 4th year undergraduate student majoring in [[http://en.sist.ustc.edu.cn|School of Information Science and Technology]] in [[http://en.ustc.edu.cn|University of Science and Technology of China(USTC)]].
+_Later Equals Never._
 
-    I am researching data mining and image processing. You can find the researches below.
+_Hope is not Plan._
+----
+== Description ==
+This wiki is used to record some knowledges that I have learned to keep it in memory.<br>
+----
+== Knowledges: ==
+	* [[vim]]
+	* [[SQL]]
+	* [[linux]]
+	* [[python]]
+	* [[c]]
+	* [[unicode]]
+	* [[chromium]]
+	* [[matlab]]
+	* [[GitHub]]
+----
+Links below are my personal records.
 
-    I am applying for admission of master or Ph.d degree in 2014 fall. Please feel free to contact me if you want to know more about me and my research.
+== Useful Links ==
+[[http://home.ustc.edu.cn/~lihebi/file|files]] [[js/ruler|Ruler]] [[http://localhost:8000|localhost]]
+[[http://localhost:8000/cgi-bin/script.cgi|cgi]]
+| [[js/clock|DSPClock]]        | [[http://www.baidu.com|Baidu]] | [[http://www.ustc.edu.cn|USTC]] | [[http://www.gentoo.org|Gentoo]] |
+| [[http://google.com|Google]] | [[http://bt.neu6.edu.cn|neu6]] | [[http://wlt.ustc.edu.cn|WLT]]  |                                  |
 
-    [[moreaboutme|More about me and my life]]
-----
-== Education ==
-* Banchelor's Degree: Undergraduate Student, Computer Science, USTC,	(2010--2013)
-* Huaibei Numberone Senior High School, Anhui Province.	(2007--2010)
-* Chengguan Numberone Junior High School, Anhui Province.	(2004--2007)
-* Experiment Primary School, Huaibei City, Anhui Province.	(1998--2004)
-----
-== GPA ==
-* My GPA is *3.48/4.3*.<br>
-* However, there seems to be some meaningless classes, which can not measure my true learning and reasearch ability. [[Examples]].<br>
-* When calculate courses that is computer-based, My GPA is *3.82/4.3*. [[Which Causes]]<br>
-* Also, I have stong math and statistics skills, as USTC is top1 in math teaching in China.[[mathskills|Causes and Descriptions]]
-----
-== English Skills ==
-* GRE General: V: 148, Q: 168, AW: 3.5<br>
-* TOEFL: Total: 90( Reading: 28, Listening: 20, Speaking: 18, Writing: 24)
-----
-== Programming ==
-* Languages
-	* proficient: *Python(main)*, *C/C++(main)*, *Jave*
-	* Learned: *SQL*, *Json*, *Shell*, *Android*, *Assembly*, *Prolog*, *HTML*
-	* ever used: *PHP*, *Javascript*
-* Operation System
-	* *Linux*(proficient): Ubuntu, Archlinux, Gentoo
-	* *Windows*(proficient)
-	* *Android*
-* Library
-	* *OpenCV*
-* Editor: *Vim*
-----
-== Reasearch Insterests ==
-* Image Processing & Computer Vision
-* Data Mining
-* Web Programming
-* Operating System
-* Computer Network
-----
-== Reasearch ==
-* [[moviecrawling|Movie Data Crawling and Analysis, 2013]]
-* [[robogame|robogame in USTC, 2012]]
-* [[freescale|Freescale Smart Car Competition, 2011]]
-----
-== Self-Study & Online-Courses ==
-Personally I feel good about my self-studying ability. The following is courses that I learned or am learning myself.
-* Building Dynamic Websites( CS-E75, by Pro. David Malan, Harvard) [learning]
-* Convex Optimization( EE-364A, by Pro. Stephen Boyd, Stanford) [learning]
-----
-== Publications ==
-----
-== Downloads ==
-* My Curriculum Vitae
-* CV: html | pdf(download)
-== Contact Me ==
-Email: lihebi@mail.ustc.edu.cn<br>
-Tel: +8618788836992<br>
-Addr: 3#606, USTC western campus, Hefei, Anhui, China<br>
-Welcome to contact me!
-----
-== My Wiki ==
-I have maintained [[wikiindex|my personal wiki]] where you may want to have a look.
+=== [[ThingList]] ===
