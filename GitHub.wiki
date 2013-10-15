@@ -1,0 +1,10 @@
+git config --global user.email 'xxx@xxx'
+git config --global user.name 'xxx'
+git add .
+git commit -m 'xxx'
+git remote add origin https://github.com/lihebi/xxx.git
+git push -u origin master
+
+git submodule add xxx
+git submodule init
+git submodule update

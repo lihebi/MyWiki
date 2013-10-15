@@ -4,3 +4,6 @@
 a.out: xxx.cpp
 	g++ -o a.out xxx.cpp
 }}}
+
+cc -c a.c
+cc a.o b.o
