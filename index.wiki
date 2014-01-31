@@ -23,7 +23,12 @@ f3: day
 f4: month
 f5: weekday
 program: excutable
+examples:
+	0 */2 * * * echo "xxx" >> /tmp/a.txt # every 2 hours
+	0 23-7/28 * * * # every 11 in everning to 8 in money every 2 hours. Wrong??
+	* * * * 1-3	# Monday to Wensday
 	- service crond restart
+	- crontab -l
 
 = Welcome to Hebi's Personal Wiki! =
 {{http://www.catb.org/hacker-emblem/glider.png|icon}}
