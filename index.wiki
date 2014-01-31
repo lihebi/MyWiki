@@ -9,6 +9,12 @@ hebiTODO
 * learn completion by git-completion.bash
 
 
+hebiWIKI
+* for f in /some/dir/*; do xxx; done
+* git config --global credential.helper cache
+* git config credential.helper 'cache --timeout=3600'
+	- in minutes
+
 = Welcome to Hebi's Personal Wiki! =
 {{http://www.catb.org/hacker-emblem/glider.png|icon}}
 %title Hebi's wiki
