@@ -1,3 +1,14 @@
+hebiTODO
+* OpenSourceProjects
+	- vim
+	- xen
+	- virtualbox
+	- linux
+	- chromium(madori)
+	- git
+* learn completion by git-completion.bash
+
+
 = Welcome to Hebi's Personal Wiki! =
 {{http://www.catb.org/hacker-emblem/glider.png|icon}}
 %title Hebi's wiki
