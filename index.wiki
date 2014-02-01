@@ -30,6 +30,36 @@ examples:
 	- service crond restart
 	- crontab -l
 
+* git log
+* if has /usr/sbin/installkernel than can use:
+	`make modules_install install`
+	to install kernel
+* v3.12-rc7 release candidate
+* git checkout #checkout a branch or paths to the working tree
+	`git checkout -b [tag name]`
+
+* the process to build a custom kernel
+        git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git 
+        cd linux-stable 
+        git tag -l | less 
+        select the latest tag(not rc) 
+        git checkout -b [tagname] 
+        git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git 
+        cd linux 
+        configure: 
+                use /boot/config-`uname -r`*.config to .config 
+                or use default config: 
+                        make defconfig 
+                or make menuconfig 
+                or make nconfig 
+        make 
+        or make -jX where X is 2 or 3 for dual core, 4 or 6 for quad core. 
+        sudo make modules_install install(because of /usr/sbin/installkernel 
+        sudo grub2-mkconfig
+
+
+
+
 = Welcome to Hebi's Personal Wiki! =
 {{http://www.catb.org/hacker-emblem/glider.png|icon}}
 %title Hebi's wiki
