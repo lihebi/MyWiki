@@ -12,7 +12,7 @@ hebiTODO
 hebiWIKI
 * for f in /some/dir/*; do xxx; done
 * git config --global credential.helper cache
-* git config credential.helper 'cache --timeout=3600'  # for a particular repo
+* git config credential.helper 'cache --timeout=3600'  # for a particular repo, must use it in a git repo, but the effect is global
 	- in minutes
 * crontab
 	- crontab -e
