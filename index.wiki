@@ -6,6 +6,7 @@ hebiTODO
 	- linux
 	- chromium(madori)
 	- git
+	- freebsd(and some other)
 * learn completion by git-completion.bash
 
 
