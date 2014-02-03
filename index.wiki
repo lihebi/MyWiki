@@ -8,9 +8,15 @@ hebiTODO
 	- git
 	- freebsd(and some other)
 * learn completion by git-completion.bash
+* learn x.vim
+
+
+DONOW
+* fcitx
 
 
 hebiWIKI
+
 
 
 = Welcome to Hebi's Personal Wiki! =
