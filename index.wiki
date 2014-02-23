@@ -9,10 +9,13 @@ hebiTODO
 	- freebsd(and some other)
 * learn completion by git-completion.bash
 * learn x.vim
+* node.js
 
 
 DONOW
 * fcitx
+
+* export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 
 hebiWIKI
