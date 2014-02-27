@@ -10,6 +10,7 @@ hebiTODO
 * learn completion by git-completion.bash
 * learn x.vim
 * node.js
+* gstreamer rtsp
 
 
 DONOW
