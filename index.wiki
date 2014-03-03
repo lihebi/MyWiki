@@ -11,13 +11,18 @@ hebiTODO
 * learn x.vim
 * node.js
 * gstreamer rtsp
+* cloud service api
 
 
 DONOW
 * fcitx
+* homepage
 
 * export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
+== TMP ==
+[[nodejs]]
+[[jekyll]]
 
 hebiWIKI
 
