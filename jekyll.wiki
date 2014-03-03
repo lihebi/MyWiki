@@ -1,0 +1,16 @@
+= Jekyll =
+Transform your plain text into static blog-aware websites and blogs.
+
+== Install ==
+yum install gem(rubygem)
+gem install jekyll
+
+== Hello World ==
+$jekyll new site
+$cd site
+$jekyll serve
+#browse to http://localhost:4000
+
+== Use with github pages ==
+`jekyll new .`
+`touch .nojekyll` # to disable jekyll

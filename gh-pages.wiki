@@ -1,0 +1,15 @@
+= Github Pages =
+
+
+== Personal Page ==
+* create project: lihebi.github.io
+* create index.html(or use jekyll)
+
+== Use lihebi.com ==
+* create file `CNAME` contain: www.lihebi.com( or xxx.lihebi.com or lihebi.com)
+* if lihebi.com than: A record = xxx.xxx.xxx.xxx
+* if www.lihebi.com then: CNAME www to lihebi.github.io
+
+
+== Project Page ==
+* in project setting, auto generator
