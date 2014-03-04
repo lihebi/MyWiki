@@ -1,0 +1,13 @@
+= Shell =
+
+
+== echo ==
+-n: do not output the trailing newline
+
+
+== read ==
+`read -p "xxx" -e var`
+
+== date ==
+vardate=`date +%Y-%m-%d`
+vartime=`date +%H:%M:%S`

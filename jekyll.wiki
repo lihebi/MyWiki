@@ -2,7 +2,7 @@
 Transform your plain text into static blog-aware websites and blogs.
 
 == Install ==
-yum install gem(rubygem)
+yum install gem([[rubygem]])
 gem install jekyll
 
 == Hello World ==
