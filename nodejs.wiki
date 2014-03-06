@@ -2,11 +2,11 @@
 
 
 == Install ==
-# yum install nodejs
+`$ yum install nodejs`
 
 == Hello World ==
 a.js
-{{{class="javascript"
+{{{class="brush: javascript"
 var http = require('http');
 http.createServer(function(req, res) {
 	res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -14,7 +14,7 @@ http.createServer(function(req, res) {
 }).listen(1337, '127.0.0.1');
 console.log('Server running at http://localhost:1337');
 }}}
-$node a.js
+`$ node a.js`
 
 == Packet Manager ==
 npm
@@ -23,14 +23,17 @@ npm
 express是Node.js上最流行的web开发框架
 
 === Install ===
-* npm install -g express # global
+{{{class="brush: shell"
+npm install -g express # global
+}}}
 
 === Helloworld ===
-* express -e blog
-* cd blog
-* npm install # install the dependence in package.json
-* node app
-* go to localhost:3000
+{{{class="brush: shell"
+express -e blog
+cd blog
+npm install # install the dependence in package.json
+node app # localhost:3000(defined in app.js)
+}}}
 
 
 === DataBase ===

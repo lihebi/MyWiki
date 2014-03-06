@@ -2,20 +2,13 @@
 %template lihebi
 
 == Tags ==
-* pre
-预格式化的文本。通常保留空格和换行。文本为等宽字体。
-* code
-文本将用等宽，类似电传打字机样式的字体(Courier)
-* i
-italic
-* b
-粗体
-* big
-大号字体
-* small
-小号字体
-* tt
-等宽
+* pre	预格式化的文本。通常保留空格和换行。文本为等宽字体。
+* code	文本将用等宽，类似电传打字机样式的字体(Courier)
+* i	italic
+* b	粗体
+* big	大号字体
+* small	小号字体
+* tt	等宽
 
 
 == Code Highlight ==
