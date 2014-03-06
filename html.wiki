@@ -1,0 +1,38 @@
+= HTML =
+
+== Tags ==
+* pre
+预格式化的文本。通常保留空格和换行。文本为等宽字体。
+* code
+文本将用等宽，类似电传打字机样式的字体(Courier)
+* i
+italic
+* b
+粗体
+* big
+大号字体
+* small
+小号字体
+* tt
+等宽
+
+
+== Code Highlight ==
+SyntaxHighlighter
+=== Install ===
+yum install syntaxhighlighter(into /usr/share/syntaxhighlighter/)
+=== Usage ===
+{{{class="brush: html"
+<link type="text/css" rel=stylesheet" href="sh/styles/shCore.css"/>
+<link type="text/css" rel=stylesheet" href="sh/styles/shThemeDefault.css"/>
+<script src="sh/scripts/shCore.js" type="text/javascript"></script>
+<script src="sh/scripts/shBrushCpp.js" type="text/javascript"></script>
+<script src="sh/scripts/shBrushJava.js" type="text/javascript"></script>
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+</script>
+
+<pre class="brush: cpp">
+xxxx
+</pre>
+}}}

@@ -11,4 +11,9 @@ source 'http://ruby.taobao.org'
 
 
 == Gem Install Packets ==
-gem install rails -V
+gem install rails -V # verbose
+gem install xxx -v 1.1.0 # install a specific version of a ruby gem
+gem # show help
+gem list
+gem uninstall xxx
+gem search xxx # search remote

@@ -1,5 +1,9 @@
 = vim =
 
+== Tips ==
+* set paste/nopaste
+* set mouse=[blank]/a/v
+
 This page talked about some usage about vim.
 * *一些使用到的插件*
 	- [[vimwiki]]

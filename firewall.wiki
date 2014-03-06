@@ -1,0 +1,6 @@
+= Firewall =
+
+
+== Start & Stop ==
+* `systemctl start/stop/restart/status firewalld.service`
+* restart this will load default configure

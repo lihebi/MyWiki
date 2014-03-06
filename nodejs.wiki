@@ -15,3 +15,25 @@ http.createServer(function(req, res) {
 console.log('Server running at http://localhost:1337');
 }}}
 $node a.js
+
+== Packet Manager ==
+npm
+
+== express ==
+express是Node.js上最流行的web开发框架
+
+=== Install ===
+* npm install -g express # global
+
+=== Helloworld ===
+* express -e blog
+* cd blog
+* npm install # install the dependence in package.json
+* node app
+* go to localhost:3000
+
+
+=== DataBase ===
+* [[mongodb]]
+
+

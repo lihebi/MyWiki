@@ -1,0 +1,29 @@
+= MongoDB =
+
+== Install ==
+* yum install mongodb mongodb-server
+
+
+== Start&Stop ==
+* service mongod start/stop/restart
+* systemctl mongod start/stop/restart
+
+
+== Connect ==
+* mongo
+
+== Commands ==
+* db
+* show dbs
+* use xxx
+* help
+
+== Insert ==
+* j = {name: "mongo"}
+* k = {x: 3}
+* db.testData.insert(j)
+* db.testData.insert(k)
+
+== Query ==
+* show collections
+* db.testData.find()
