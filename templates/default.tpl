@@ -1,1 +1,0 @@
-/home/hebi/.vim/bundle/vundle/autoload/vimwiki/default.tpl

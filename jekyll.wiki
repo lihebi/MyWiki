@@ -19,7 +19,7 @@ $jekyll serve
 == Disqus ==
 Disqus can provide comments for Jekyll.
 Just add the following into _layouts/post.html:
-{{{class="javascript"
+{{{class="brush: javascript"
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">

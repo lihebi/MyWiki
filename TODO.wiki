@@ -1,0 +1,33 @@
+= TODO =
+
+
+* OpenSourceProjects
+	- vim
+	- xen
+	- virtualbox
+	- linux
+	- chromium(madori)
+	- git
+	- freebsd(and some other)
+* learn completion by git-completion.bash
+* learn x.vim
+* node.js
+* gstreamer rtsp
+* cloud service api
+* 肖十一郎
+* 百家讲坛
+* 公开课
+
+
+DONOW
+* fcitx
+* homepage
+* ruby on rails
+* jekyll bootrap
+* doc generator
+* javascript
+* html5
+* font
+* gui
+
+* export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig

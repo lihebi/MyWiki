@@ -1,64 +1,24 @@
-hebiTODO
-* OpenSourceProjects
-	- vim
-	- xen
-	- virtualbox
-	- linux
-	- chromium(madori)
-	- git
-	- freebsd(and some other)
-* learn completion by git-completion.bash
-* learn x.vim
-* node.js
-* gstreamer rtsp
-* cloud service api
-* 肖十一郎
-* 百家讲坛
-* 公开课
 
+= Hebi's Personal Wiki =
+%title Hebi's wiki
+%template lihebi
+[[moto]]
 
-DONOW
-* fcitx
-* homepage
-* ruby on rails
-* jekyll bootrap
-* doc generator
-* javascript
-* html5
-* font
-* gui
+[[TODO]]
 
-* export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-
-== TMP ==
+* [[vim]]
+* [[SQL]]
+* [[linux]]
+* [[python]]
+* [[c]]
+* [[unicode]]
+* [[chromium]]
+* [[matlab]]
+* [[GitHub]]
+ 
 [[nodejs]]
 [[jekyll]]
 [[gh-pages]]
 [[shell]]
 [[ruby]]
 [[html]]
-
-hebiWIKI
-
-
-
-= Welcome to Hebi's Personal Wiki! =
-{{http://www.catb.org/hacker-emblem/glider.png|icon}}
-%title Hebi's wiki
-== Motto ==
-_Keep Coding and Carry On._
-
-_Later Equals Never._
-
-_Hope is not Plan._
-----
-== Knowledges: ==
-	* [[vim]]
-	* [[SQL]]
-	* [[linux]]
-	* [[python]]
-	* [[c]]
-	* [[unicode]]
-	* [[chromium]]
-	* [[matlab]]
-	* [[GitHub]]
