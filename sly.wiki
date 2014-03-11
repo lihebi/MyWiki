@@ -7,8 +7,10 @@
 <script src="sly.js"></script>
 <script src="lihebi.js"></script>
 <div class="wrap">
-    <div class="handle">
-	<div class="mousearea"></div>
+    <div class="scrollbar">
+	<div class="handle">
+	    <div class="mousearea"></div>
+	</div>
     </div>
     <div class="frame" id="basic">
 	<ul class="slide">
@@ -107,6 +109,7 @@ lihebi.js:
 {{{class="brush: js"
 $(document).ready(function(){
     // 必须用id，用class会选很多，还要取第一个
+    //can use: $(".frame").eq(0)
     var $frame = $("#basic"); //最容易出错的，#.
     var $slide = $frame.children('ul').eq(0);
     var $wrap = $frame.parent();
@@ -120,7 +123,7 @@ $(document).ready(function(){
 	startAt: 3,
 	scrollBar: $wrap.find('.scrollbar'),
 	scrollBy: 1,
-	pageBar: $wrap.find('.pages'),
+	pagesBar: $wrap.find('.pages'),
 	activatePageOn: 'click',
 	speed: 300,
 	elasticBounds: 1,

@@ -1,0 +1,17 @@
+= SmoothScroll =
+
+== Usage ==
+
+{{{class="brush: html"
+<script src="jquery.js"></script>
+<script src="jquery.smooth-scroll.js"></script>
+<script>
+    $('a').smoothScroll();
+}}}
+
+
+{{{class="brush: js"
+$('html, body').animate({
+    scrollTop: target.offset().top
+    }, 1000);
+}}}

@@ -5,6 +5,8 @@
 * jquery.easing: 提供各种动画效果。
 * [[waypoint]]: execute a function whenever you scroll to an element.
 * spin: create a spin(wait for load)
+* [[SmoothScroll]]
+* viewport
 
 == TIPS ==
 * === 全等，值和类型
