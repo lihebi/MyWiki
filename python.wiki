@@ -1,11 +1,65 @@
 = Python =
 
-== 技巧 ==
-* `for line in open('xxx.txt'):`
-* `l = sorted(d.items(), key=lambda d: d[1])	# 按value排序，返回list`
+l = sorted(d.items(), key=lambda d: d[1])	# 按value排序，返回list
+
+== Basic ==
+* list
+{{{class="brush: python"
+a = [1,3]
+len(a)
+}}}
+
+== file ==
+{{{class="brush: python"
+for line in open('xxx.txt'):
+	# manipulate for line
+}}}
+
+== string ==
+{{{class="brush: python"
+s='string'
+s.capitalize() # 返回字符串首字母大写
+s.find('e') # 返回index，从0开始。-1没找到
+s.index('e') # 同find。没找到raise ValueError
+s.rfind()
+s.rindex()
+}}}
+
+== urllib ==
+{{{class="brush: python"
+import urllib
+urllib.urlretrieve(url, filename=None) # get remote url file and save it as filename
+}}}
+
+== re ==
+[[re]] 语法
+
+{{{class="brush: python"
+import re
+
+pattern = re.compile('\d+.*$')
+type(pattern) # _sre.SRE_Pattern
+s = 'this is a test string'
+pattern.match(s)	//return True or False
+pattern.findall(s)
+
+m = re.match("[pattern]", "string")
+#match 需要全匹配。 若不匹配，返回None
+type(m) # _sre.SRE_Match
+type(m.re) # _sre.SRE_Match
+m.group() # 匹配的字符串
+
+m = re.search("[pattern]", "string")
+# search只要有就行
+type(m) # _sre.SRE_Match
+m.group()
+
+m = re.findall("[pattern]", "string")
+type(m) # list, a list of string that match
+}}}
+
 
 == standard libraries ==
-* [[re]]
 * [[optparse]]
 * [[subprocess]]
 * [[pickle]]

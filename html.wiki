@@ -10,11 +10,15 @@
 * small	小号字体
 * tt	等宽
 
+== Tips ==
+<a href="#" target="_blank"></a>
 
 == Code Highlight ==
 SyntaxHighlighter
+
 === Install ===
 yum install syntaxhighlighter(into /usr/share/syntaxhighlighter/)
+
 === Usage ===
 {{{class="brush: xml"
 <link type="text/css" rel=stylesheet" href="sh/styles/shCore.css"/>

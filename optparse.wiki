@@ -1,12 +1,12 @@
 = Optparse =
 
-{{{python
+{{{class="brush: python"
 	p = optparse.OptionParser()
 	p.add_option('--name','-n',default='john')
 	options, arguments = p.parse_args()
 	print(options.name)
 }}}
-{{{python
+{{{class="brush: python"
 	p = optparse.OptionParser(description='xxx',prog='xxx',version='xxx',usage='xxx')
 	options,arguments = p.parse_args()
 	if xxx:

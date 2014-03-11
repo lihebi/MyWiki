@@ -1,5 +1,9 @@
 = Linux =
 
+== Tmp ==
+mac address: 4f-d3-56-8a-3f-ee
+use vlc, and play from network stream, convert/save, select raw data. OK.
+
 == [[Command]] ==
 
 == Configure ==
@@ -31,9 +35,10 @@
 	- xprop
 	- xmessage
 	- foxitreader
-	- xpdf
+	- xpdf evince
 	- xclip, xsel
 	- gbkunzip
+	- tidy: format xml `tidy -utf8 -i a.html > b.html`
 == Topics ==
 * [[flash|flashplugin for browser]]
 * [[zimu coding error for movies]]

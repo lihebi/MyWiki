@@ -17,6 +17,10 @@
 * 肖十一郎
 * 百家讲坛
 * 公开课
+* php
+* chrome
+* tab  = 4
+* spanish, france, japanese
 
 
 DONOW

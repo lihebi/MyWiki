@@ -3,6 +3,7 @@
 == Tips ==
 * set paste/nopaste
 * set mouse=[blank]/a/v
+* qq xxx q    @q 5@q
 
 This page talked about some usage about vim.
 * *一些使用到的插件*

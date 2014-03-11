@@ -1,0 +1,8 @@
+= EJS =
+
+ejs is a view engine used with express for Node.js
+
+== 标签系统 ==
+* `<% code %>` ===> Javascript代码
+* `<%= code %>` ===> 替换过html特殊字符的内容
+* `<%- code %>` ===> 原始html内容

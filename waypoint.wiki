@@ -1,0 +1,9 @@
+= waypoint =
+
+Waypoint is a jQuery plugin that makes it easy to execute a function whenever you scroll to an element.
+
+== Usage ==
+
+$('.thing').waypoint(function(direction) {
+    alert('xx');
+});

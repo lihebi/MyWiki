@@ -1,5 +1,6 @@
 = Subprocess =
 
-* 
-	`from subprocess import call`
-	`call(['ls','-l'])`
+{{{class="brush: python"
+from subprocess import call
+call(['ls','-l'])
+}}}

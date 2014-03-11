@@ -2,35 +2,54 @@
 
 
 * sudo
-	export SUDO_USER=hebi
-	/etc/sudousr ==> hebi ALL(ALL) ALL
-* cdrecord -v -eject speed=2 xxx.iso
-* makepkg -s
-* pacman -U xxx.pkg.tar.xz
+{{{class="brush: shell"
+export SUDO_USER=hebi
+vim /etc/sudousr # hebi ALL(ALL) ALL
+}}}
+* cdrecord
+{{{class="brush: shell"
+cdrecord -v -eject speed=2 xxx.iso
+}}}
+* makepkg
+{{{class="brush: shell"
+makepkg -s
+pacman -U xxx.pkg.tar.xz
+}}}
  
-* pkill x
+* kill x
+{{{class="brush: shell"
+pkill x
+}}}
 * dumpkeys & loadkeys
-	dumpkeys > mykeymap
-	loadkeys mykeymap # modify this map can 终端改键
+{{{class="brush: shell"
+dumpkeys > mykeymap
+loadkeys mykeymap # modify this map can 终端改键
+}}}
 * xmodmap (X11下改键)
-	xmodmap -e "keysym Caps_Lock = Shift_L" # files: .xinitrc, /usr/include/X11/keymapdef.h
-* man ascii
+{{{class="brush: shell"
+xmodmap -e "keysym Caps_Lock = Shift_L" # files: .xinitrc, /usr/include/X11/keymapdef.h
+}}}
+* man
+{{{class="brush: shell"
+man ascii
+}}}
 * split & cat
-	split -b 1m filename output_prefix
-	cat smallfile* > largefilename
+{{{class="brush: shell"
+split -b 1m filename output_prefix
+cat smallfile* > largefilename
+}}}
 * netstat
-	-a ===> all
-	-t ===> tcp
-	-u ===> udp
-	-n ===> use numbers
-	-l ===> only list listening
-	-p ===> show pid and program
-	-r ===> show routers
-	-e ===> show extend info
-	-s ===> statistics by protocols
-	-c ===> repeat by a certain time
+{{{class="brush: shell"
+-a ===> all
+-t ===> tcp
+-u ===> udp
+-n ===> use numbers
+-l ===> only list listening
+-p ===> show pid and program
+-r ===> show routers
+-e ===> show extend info
+-s ===> statistics by protocols
+-c ===> repeat by a certain time
+}}}
 
-
-* ifconfig 可以查看mac地址
-	也可以cat /sys/class/net/[p33p1]/address
 * C-u 删掉当前命令行上的文本

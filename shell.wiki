@@ -11,3 +11,5 @@
 == date ==
 vardate=`date +%Y-%m-%d`
 vartime=`date +%H:%M:%S`
+
+ll | wc -l
