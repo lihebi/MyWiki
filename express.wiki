@@ -1,0 +1,189 @@
+= express =
+express是Node.js上最流行的web开发框架
+
+== Install ==
+{{{class="brush: shell"
+npm install -g express # global
+}}}
+
+== Helloworld ==
+{{{class="brush: shell"
+express -e blog
+cd blog
+npm install # install the dependence in package.json
+node app # localhost:3000(defined in app.js)
+}}}
+
+* checklogin
+{{{class="brush: js"
+function checkLogin(req, res, next) {
+    if (!req.session.user) {
+        req.flash('error', 'Please Login First');
+        req.redirect('/login');
+    }
+    next();
+}
+function checkNotLogin(req, res, next) {
+    if (req.session.user) {
+        req.flash('error', 'YOu have already logged in');
+        res.redirect('back');
+    }
+}
+function checkHebi(req, res, next) {
+    if (!req.session.user || req.session.user.email != 'lihebi@...') {
+        req.flash('error', 'xxx');
+        res.redirect('back');
+    }
+}
+
+//usage
+app.get('/me', checkLogin);
+app.get('/me', function(req, res) { ...});
+}}}
+
+* res & req
+
+{{{class="brush: js"
+app.get('/hebi/xx', function(req, res) {
+    res.render('index', {
+        title: title,
+        user: req.session.user,
+        data: data,
+        success: req.flash('success').toString(),
+        error: req.flash('error').toString()
+    });
+    req.query.id;
+    res.redirect('/login');
+    res.send(cars);
+    res.send({name: 'xx', id: 3});
+});
+}}}
+
+* session
+app.js:
+{{{class="brush: js"
+var MongoStore = require('connect-mongo')(express);
+app.use(express.session({
+    secret: 'cookieSecret',
+    key: 'dbname', //??
+    cookie: {maxAge: 1000*60*60*24*30},
+    store: new MongoStore({
+        db: 'dbname'
+    })
+}));
+}}}
+account.js
+{{{class="brush: js"
+var crypto = require('crypto');
+function reg(req, res) {
+    var email = req.body.email;
+    var password = req.body.password;
+    var confirmPassword = req.body.confirmPassword;
+    if (!password || !confirmPassword || password != confirmPassword) {
+        req.flash('error', 'xxx');
+        return res.redirect('/reg');
+    }
+    var md5 = crypto.createHash('md5');
+    var password_md5 = md5.update(password).digest('hex');
+    var newUser = new User({
+        email: email,
+        password: password_md5
+    });
+    User.get(newUser.email, function(err, user) {
+        if (user) {
+            req.flash('error', 'user already exists');
+            return res.redirect('/reg');
+        }
+        newUser.save(function(err, user) {
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/reg');
+            }
+            req.session.user = user;
+            req.flash('success', 'register success');
+            res.redirect('back');
+        });
+    });
+}
+function login (req, res) {
+    var md5 = crypto.createHash('md5');
+    var password = md5.update(req.body.password).digest('hex');
+    User.get(req.body.email, function(err, user) {
+        if (!user) {
+            req.flash('error', 'user not exists');
+            return res.redirect('/login');
+        }
+        if (user.password != password) {
+            req.flash('error', 'wrong password');
+            return res.redirect('/login');
+        }
+        req.session.user = user;
+        req.flash('success', 'login success');
+        res.redirect('/');
+    }); 
+}
+function logout(req, res) {
+    req.session.user = null;
+    res.redirect('/');
+}
+}}}
+
+* flash
+{{{class="brush: js"
+// app.js
+var flash=require('connect-flash');
+app.use(flash());
+
+route.js
+req.flash('success', 'xxx');
+req.flash('success').toString();
+}}}
+
+
+== DataBase ==
+* [[mongodb]]
+
+
+== View Engine ==
+[[ejs]]
+
+* exports
+{{{class="brush: js"
+/* definition in car.js */
+function Car(car) {
+    this.name = car.name;
+    this.id = car.id;
+}
+module.exports = Car;
+
+Car.prototype.save = function(callback) {
+};
+
+Car.get = function(id, callback) {
+};
+
+/* usage */
+var Car = require('./car.js');
+var newcar = new Car({
+    name: 'xxx',
+    id: 123
+});
+newcar.save(function(){});
+Car.get(id, function(){});
+
+}}}
+
+{{{class="brush: js"
+/* definition  in account.js */
+exports.login = login;
+exports.reg = reg;
+function  login(req, res) {
+}
+function reg(req, res) {
+}
+
+/* usage */
+var account = require('./account.js');
+account.login(req, res);
+account.reg(req, res);
+}}}

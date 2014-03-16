@@ -9,9 +9,12 @@
 * big	大号字体
 * small	小号字体
 * tt	等宽
+=== input ===
+input type=: text, password, datetime, datetime-local, date, month, time, week, number, email, color
 
 == Tips ==
 <a href="#" target="_blank"></a>
+任何元素的title='xxx'，就可以鼠标放在上面，显示文字。
 
 == Code Highlight ==
 SyntaxHighlighter
@@ -20,7 +23,7 @@ SyntaxHighlighter
 yum install syntaxhighlighter(into /usr/share/syntaxhighlighter/)
 
 === Usage ===
-{{{class="brush: xml"
+{{{class="brush: html"
 <link type="text/css" rel=stylesheet" href="sh/styles/shCore.css"/>
 <link type="text/css" rel=stylesheet" href="sh/styles/shThemeDefault.css"/>
 <script src="sh/scripts/shCore.js" type="text/javascript"></script>

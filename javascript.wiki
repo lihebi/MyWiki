@@ -7,10 +7,11 @@
 * spin: create a spin(wait for load)
 * [[SmoothScroll]]
 * viewport
+* [[JQuery]]
 
 == TIPS ==
 * === 全等，值和类型
-* [[JQuery]]
+
 {{{class="brush: js"
 xxx || xxx //左侧的值为真则返回之，为假则返回右侧
 xxx && xxx //左侧的值为假则返回之，为真则返回右侧
@@ -26,6 +27,7 @@ $(window).width()
 
 == 内置函数 ==
 * Date() ===> Fri Mar 07 2014 11:23:53 GMT+0800 (CST)
+* window.location.pathname ==> /login
 
 
 

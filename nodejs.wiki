@@ -1,5 +1,7 @@
 = Node.js =
 
+[[express]]
+
 == Tmp ==
 PaaS for Node.js
 * Nodester
@@ -76,6 +78,10 @@ npm install # find package.json
 npm docs [modulename]
 npm edit [modulename] // read source code.
 npm list
+
+# autoload when modified
+npm install -g node-dev
+node-dev app
 }}}
 
 package.json
@@ -88,28 +94,4 @@ package.json
 	}
 }
 }}}
-
-== express ==
-express是Node.js上最流行的web开发框架
-
-=== Install ===
-{{{class="brush: shell"
-npm install -g express # global
-}}}
-
-=== Helloworld ===
-{{{class="brush: shell"
-express -e blog
-cd blog
-npm install # install the dependence in package.json
-node app # localhost:3000(defined in app.js)
-}}}
-
-
-=== DataBase ===
-* [[mongodb]]
-
-
-=== View Engine ===
-[[ejs]]
 

@@ -1,9 +1,23 @@
 = vim =
 
+== Syntax ==
+syn keyword xType function def int long
+hi link xType Type
+
+syn match myconceal /hebi/ conceal
+set cole=2
+
+syn region reconceal start=/hh/ end=/bb/
+hi link reconceal Ignore
+
+" make availabe for any type:
+au BufRead,BufNewFile * syn match ...
+
 == Tips ==
 * set paste/nopaste
 * set mouse=[blank]/a/v
 * qq xxx q    @q 5@q
+* :scriptnames " 查看加载配置文件及顺序
 
 This page talked about some usage about vim.
 * *一些使用到的插件*
@@ -13,6 +27,7 @@ This page talked about some usage about vim.
 	- [[NERDTree]]
 	- [[taglist]]
 	- [[vimim]]
+	- jsbeautify: <leader>ff
 
 * *map*
 	- use `:help map` for whole help

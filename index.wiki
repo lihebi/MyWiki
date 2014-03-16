@@ -6,21 +6,28 @@
 
 [[TODO]]
 
-* [[vim]]
-* [[SQL]]
-* [[linux]]
-* [[python]]
-* [[c]]
-* [[unicode]]
-* [[chromium]]
-* [[matlab]]
-* [[GitHub]]
+== WebDesign ==
 * [[javascript]]
- 
 * [[nodejs]]
 * [[jekyll]]
+* [[css]]
+* [[html]]
 * [[gh-pages]]
+* [[bootstrap]]
+
+== Coding ==
+* [[SQL]]
+* [[python]]
+* [[c]]
+* [[matlab]]
+* [[GitHub]]
 * [[shell]]
 * [[ruby]]
-* [[html]]
-* [[css]]
+
+== Linux ==
+* [[vim]]
+* [[linux]]
+* [[unicode]]
+
+== Software ==
+* [[chromium]]

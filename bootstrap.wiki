@@ -1,0 +1,127 @@
+= Bootstrap =
+
+== Usage ==
+put fonts in the right place(../fonts/gly...)
+{{{class="brush: html"
+<link href='bootstrap.min.css' rel='stylesheet' media='screen'>
+<script src='jquery.js'></script>
+<script src='bootstrap.min.js'></script>
+}}}
+
+* btn
+btn-default, btn-primary, btn-success, btn-info, btn-warning, btn-danger, btn-link
+{{{class="brush: html"
+<button type='button' class='btn btn-default'>xx</button>
+<a class='btn'>xx</a>
+}}}
+
+* skip to main
+* sr-only
+{{{class="brush: html"
+<a class='sr-only' href='#content'>skip to main content</a>
+}}}
+
+* navbar navbar-inverse navbar-right
+* dropdown
+* express <% %>
+* col-md-x
+{{{class="brush: html"
+<div class='navbar navbar-inverse'>
+    <div class='col-md-2'>
+	<a href='./' class='navbar-brand'>zuchefeng</a>
+    </div>
+    <div class='col-md-6'>
+	<ul class='nav navbar-nav'>
+	    <li class='active'><a href='#'>xxx</a></li>
+	    <li><a href='#'>xxx</a></li>
+	</ul>
+    </div>
+    <div class='col-md-4'>
+	<ul class='nav navbar-nav navbar-right'>
+	    <%if (user) { %>
+		<li class='active'><a href='#'>xxx</a></li>
+		<li><a href='#'>xxx</a></li>
+	    <% } else } %>
+		<li class='active'><a href='#'>xxx</a></li>
+		<li><a href='#'>xxx</a></li>
+	    <% } %>
+	    <li class='dropdown'>
+		<a href='#' data-toggle='dropdown' class='dropdown-toggle'>xx<strong class='caret'></strong></a>
+		<ul class='dropdown-menu'>
+		    <li><a href='#'>xxx</a></li>
+		    <li><a href='#'>xxx</a></li>
+		</ul>
+	    </li>
+	</ul>
+    </div>
+</div>
+}}}
+
+* jumbotron
+{{{class="brush: html"
+<div class='jumbotron'>
+</div>
+}}}
+
+* form
+form-horizontal
+{{{class="brush: html"
+<form method='post' role='form'>
+    <div class='form-group'>
+	<label for='inputEmail'>email</label>
+	<input name='email' type='email' class='form-control' id='inputEmail' placeholder='user@126.com'/>
+    </div>
+    <div class='form-group'>
+	<label for='inputPassword'>Password</label>
+	<input name='password' type='password' class='form-control' id='inputPassword' placeholder='Password'/>
+    </div>
+    <div class='form-group checkbox'>
+	<label><input type='checkbox'/>remember me</label>
+    </div>
+    <div class='form-group'>
+	<label><button type='submit' class='btn'>Login</label></button>
+    </div>
+</form>
+}}}
+
+* carousel
+{{{class="brush: html"
+<div class='carousel slide' id='myslide' data-ride='carousel'>
+    <ol class='carousel-indicators'>
+	<li data-target='#myslide' data-slide-to='0' class='active'>
+	<li data-target='#myslide' data-slide-to='1' class='active'>
+	<li data-target='#myslide' data-slide-to='2' class='active'>
+    </ol>
+    <div class='carousel-inner'>
+	<div class='item active'>
+	    <img alt='' src=''/>
+	    <div class='carousel-caption'>xxx</div>
+	</div>
+	<div class='item active'>
+	    <img alt='' src=''/>
+	    <div class='carousel-caption'>xxx</div>
+	</div>
+	<div class='item active'>
+	    <img alt='' src=''/>
+	    <div class='carousel-caption'>xxx</div>
+	</div>
+    </div>
+    <a class='left carousel-control' href='#mainslide' data-slide='prev'><span class='glyphicon glyphicon-chevron-left'></span></a>
+    <a class='right carousel-control' href='#mainslide' data-slide='next'><span class='glyphicon glyphicon-chevron-right'></span></a>
+</div>
+}}}
+
+* btn-group
+{{{class="brush: html"
+<div class='btn-group'>
+    <a type='button' data-toggle='buttons' class='btn'>xx</a>
+    <a type='button' data-toggle='buttons' class='btn'>xx</a>
+    <a type='button' data-toggle='buttons' class='btn'>xx</a>
+</div>
+}}}
+
+* alert
+alert-success, alert-info, alert-warning, alert-danger
+{{{class="brush: html"
+<div class='alert alert-success'>xxx</div>
+}}}

@@ -6,3 +6,14 @@ ejs is a view engine used with express for Node.js
 * `<% code %>` ===> Javascript代码
 * `<%= code %>` ===> 替换过html特殊字符的内容
 * `<%- code %>` ===> 原始html内容
+
+== Example ==
+
+<%- include header %>
+<%- include ../footer %>
+
+<% if (success) { %>
+    <div>xxx</div>
+<% } else { %>
+    <div>xxx</div>
+<% } %>
