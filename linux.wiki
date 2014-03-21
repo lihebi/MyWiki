@@ -3,11 +3,122 @@
 == Tmp ==
 mac address: 4f-d3-56-8a-3f-ee
 use vlc, and play from network stream, convert/save, select raw data. OK.
+* C-u 删掉当前命令行上的文本
 
-== [[Command]] ==
+== 系统管理 ==
+* rc.local
+/etc/rc.d/rc.local: create it, make it executable, have #!/bin/bash, and it will run on boot.
+* systemctl
+{{{class="brush: shell"
+systemctl # check the current services' status
+systemctl enable httpd # enable at boot
+# as for mysqld:
+sudo cp /usr/lib/systemd/system/mariadb.service /etc/systemd/system/mariadb.service
+sudo ln -s /etc/systemd/system/mariadb.service /etc/systemd/system/mysqld.service
+sudo systemctl enable mariadb
+# ln -s '/etc/systemd/system/mariadb.service' '/etc/systemd/system/multi-user.target.wants/mariadb.service'
+
+
+cd /etc/init.d # ===> /etc/rc.d/init.d
+touch lihebi
+chmod +x lihebi
+vi lihebi # #!/bin/sh
+
+systemctl start lihebi
+
+# if changed one file, use reload
+systemctl daemon-reload
+}}}
+
+* /etc/rc.d/init.d/
+* chgrp chown chmod
+{{{class="brush: shell"
+chgrp -R hebi xxx
+chown -R hebi xxx
+chown -R hebi:hebi xxx
+chmod 777 -R xxx
+}}}
+* useradd
+{{{class="brush: shell"
+# create a new user in this group
+useradd -G [groupname] username
+# add an existing user to group
+usermod -a -G groupname username # reboot to validate
+# show my groups
+groups
+# show user's groups
+groups username
+}}}
+
+== Command ==
+
+=== 系统 ===
+* sudo
+{{{class="brush: shell"
+export SUDO_USER=hebi
+vim /etc/sudousr # hebi ALL(ALL) ALL
+}}}
+* kill x
+{{{class="brush: shell"
+pkill x
+}}}
+* man
+{{{class="brush: shell"
+man ascii
+}}}
+=== 软件 ===
+* unrar
+e: extract only
+x: keep architecture
+* cdrecord
+{{{class="brush: shell"
+cdrecord -v -eject speed=2 xxx.iso
+}}}
+* dumpkeys & loadkeys
+{{{class="brush: shell"
+dumpkeys > mykeymap
+loadkeys mykeymap # modify this map can 终端改键
+}}}
+* xmodmap (X11下改键)
+{{{class="brush: shell"
+xmodmap -e "keysym Caps_Lock = Shift_L" # files: .xinitrc, /usr/include/X11/keymapdef.h
+}}}
+* split & cat
+{{{class="brush: shell"
+split -b 1m filename output_prefix
+cat smallfile* > largefilename
+}}}
+* echo -n
+=== 包管理 ===
+* makepkg
+{{{class="brush: shell"
+makepkg -s
+pacman -U xxx.pkg.tar.xz
+}}}
+=== 网络 ===
+* netstat
+{{{class="brush: shell"
+-a ===> all
+-t ===> tcp
+-u ===> udp
+-n ===> use numbers
+-l ===> only list listening
+-p ===> show pid and program
+-r ===> show routers
+-e ===> show extend info
+-s ===> statistics by protocols
+-c ===> repeat by a certain time
+}}}
+* [[squid]]
+* [[ssh]]
+* [[openvpn]]
+* [[screen]]
+* [[ftp]]
+
 
 == Configure ==
 * [[bash_history]]
+* [[bashrc]]
 
 == Gentoo ==
 * [[Install_of Gentoo]]
@@ -39,6 +150,8 @@ use vlc, and play from network stream, convert/save, select raw data. OK.
 	- xclip, xsel
 	- gbkunzip
 	- tidy: format xml `tidy -utf8 -i a.html > b.html`
+	- vnc viewer
+	- [[ffmpeg]]
 == Topics ==
 * [[flash|flashplugin for browser]]
 * [[zimu coding error for movies]]
@@ -46,3 +159,12 @@ use vlc, and play from network stream, convert/save, select raw data. OK.
 * [[luit]]
 * [[multiboot|Multiboot Usb]]
 * [[firewall]]
+* 
+
+== Scripts ==
+change permission
+{{{class="brush: shell"
+find . -type f -exec chmod 644 {} \;
+find . -type d -exec chmod 755 {} \;
+}}}
+}}}

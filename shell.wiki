@@ -4,6 +4,8 @@
 == echo ==
 -n: do not output the trailing newline
 
+== script ==
+set -v on/off
 
 == read ==
 `read -p "xxx" -e var`
@@ -13,3 +15,39 @@ vardate=`date +%Y-%m-%d`
 vartime=`date +%H:%M:%S`
 
 ll | wc -l
+
+== String ==
+
+{{{class="brush: shell"
+${string:5:3} # from position 5, get 3
+${string/substring/replacement} # 替换第一个匹配
+${f/ /\\ }
+${string//substring/replacement} # 替换所有匹配
+${#string} # $string的长度
+}}}
+
+== IF ==
+{{{class="brush: shell"
+if [ 5 -gt 4 ]
+then
+fi
+
+(( 5 > 4 ))
+
+[ xxx -a xxx ] [[ xxx && xxx ]]
+[ xxx -o xxx ] [[ xxx || xxx ]]
+[ ! xxx ] ===> [[ ! ]]
+
+-z string # 空?
+-n string # 非空?
+string1 == string2
+string1 != string2
+}}}
+
+== for ==
+{{{class="brush: shell"
+for ((x=0;x<5;x++))
+do
+done
+}}}
+}}}
