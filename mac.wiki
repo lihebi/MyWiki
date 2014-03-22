@@ -3,12 +3,18 @@
 == basic ==
 ⌃       控制代码
 ⌥       Option 键
+open unkown app: control+right click, then choose 'open'
+open ~ # open finder
 
 == shortcuts ==
 === useful ===
 {{{
+command-tab     tab amoung apps
 command-`       tab in current app
 shift-option-d  dock hide/show
+command-m       minimize current window
+command-n       open a new window for current app
+command-t       open a new tab for current app
 }}}
 
 === startup ===

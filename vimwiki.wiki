@@ -10,4 +10,3 @@ use `:vimwiki2html` and `:vimwikiall2html` to create the html page
 
 you would want to see:
 	* [[a special page]]
-	* [[TODO List]]

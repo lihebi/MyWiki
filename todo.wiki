@@ -41,6 +41,10 @@
 * chrome
 * tab  = 4
 * spanish, france, japanese
+* hide finder in switcher
+* case sensitive
+* lisp
+* curl
 
 
 DONOW

@@ -2,6 +2,8 @@
 
 === Install ===
 Just use pacman.
+* on mac
+port install mysql5 mysql5-server
 === Usage ===
 * 直接运行不起来,不知道什么原因,解决办法:
     `sudo mysqld_safe`,并强制关闭本终端<C-C>
