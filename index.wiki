@@ -26,6 +26,7 @@
 * [[ruby]]
 
 == Linux ==
+* [[mac]]
 * [[vim]]
 * [[linux]]
 * [[unicode]]
