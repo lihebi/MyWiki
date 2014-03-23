@@ -5,10 +5,13 @@
 ⌥       Option 键
 open unkown app: control+right click, then choose 'open'
 open ~ # open finder
+/usr/libexec/locate.updatedb # equal to updatedb, see also `man locate`
 
 == Tips ==
 to use locate, first type:
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
+[[acl]]
 
 == [[mac-shortcuts]] ==
 

@@ -1,4 +1,6 @@
 = TODO =
+== Do it now ==
+login as guest, test apache
 
 == zuchefeng ==
 * 汽车数据库
@@ -22,6 +24,7 @@
 * paper
 * japanese
 * 圣经
+* 霹雳布袋戏
 
 
 * OpenSourceProjects

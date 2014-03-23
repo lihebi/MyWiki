@@ -1,0 +1,19 @@
+= acl =
+
+ls -le
+-rwxrwxrwx+
+
+by default, /Users/hebi:
+0: group:everyone deny delete
+
+== change ==
+{{{class="brush: shell"
+chmod +a "admin allow write" filename # 0: group:admin allow write
+chmod +a "admin allow delete" filename # 0: group:admin allow write,delete
+chmod +a "admin deny delete" filename 
+# 0: group:admin deny delete
+# 1: group:admin allow write,delete
+chmod -a#0 filename
+}}}
+
+see also: man chmod, search acl
