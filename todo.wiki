@@ -19,6 +19,9 @@
 * wiki
 * 数据库冗余
 * 表单客户端直接验证
+* paper
+* japanese
+* 圣经
 
 
 * OpenSourceProjects

@@ -102,3 +102,10 @@ reboot
 
 == use in mac ==
 tunnelblick
+
+== use in windows ==
+use openvpn gui, stable version, installation package(both 32-bit and 64-bit TAP driver included)
+openvpn-2.0.9-gui-1.0.3-install.exe
+
+# in /etc/openvpn/server.conf, remove the bypass-dhcp in push directive
+# in client.ovpn, add `route-method exe` in the end

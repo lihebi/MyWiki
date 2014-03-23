@@ -13,6 +13,9 @@ hi link reconceal Ignore
 " make availabe for any type:
 au BufRead,BufNewFile * syn match ...
 
+== Operations ==
+* virtual select, then U to uppercase
+
 == Tips ==
 * set paste/nopaste
 * set mouse=[blank]/a/v

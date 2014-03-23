@@ -83,6 +83,7 @@ loadkeys mykeymap # modify this map can 终端改键
 * xmodmap (X11下改键)
 {{{class="brush: shell"
 xmodmap -e "keysym Caps_Lock = Shift_L" # files: .xinitrc, /usr/include/X11/keymapdef.h
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' # haven't tested yet
 }}}
 * split & cat
 {{{class="brush: shell"
