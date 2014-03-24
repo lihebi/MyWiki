@@ -4,6 +4,9 @@
 Just use pacman.
 * on mac
 port install mysql5 mysql5-server
+/opt/local/lib/mysql5/bin/mysql_install_db --user=mysql
+/opt/local/lib/mysql5/bin/mysql_secure_installation
+/opt/local/lib/mysql5/bin/mysqld_safe5 &
 === Usage ===
 * mysql -u root password 'xxx'
 * 直接运行不起来,不知道什么原因,解决办法:

@@ -1,0 +1,8 @@
+= macport =
+
+port deps vim
+port install xxx
+port uninstall xxx
+port info xxx
+
+sudo port -d selfupdate

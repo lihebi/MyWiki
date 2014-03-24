@@ -8,6 +8,7 @@ shift-option-d  dock hide/show
 command-m       minimize current window
 command-n       open a new window for current app
 command-t       open a new tab for current app
+command-shift-3 screenshot
 }}}
 
 === startup ===

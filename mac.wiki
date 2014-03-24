@@ -10,6 +10,9 @@ open ~ # open finder
 == Tips ==
 to use locate, first type:
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+open -a Google\ Chrome index.html
+
+[[macport]]
 
 [[acl]]
 

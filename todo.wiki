@@ -1,6 +1,8 @@
 = TODO =
 == Do it now ==
 login as guest, test apache
+build my wiki using mediawiki/tikiwiki, and manage my wiki!!
+google-prettify
 
 == zuchefeng ==
 * 汽车数据库

@@ -1,5 +1,123 @@
 = Ruby =
 
+[[rails]]
+
+irb: interactive ruby
+
+== syntax ==
+注释
+{{{class="brush: ruby"
+# commit
+=begin
+commit
+commit
+=end
+# no ';'
+}}}
+
+变量
+{{{class="brush: ruby"
+x='56' # local variable
+@x = 'xxx' # instance variable
+@@x = 'xxx' # class variable( static variable)
+$x = 'xxx' # global variable
+Mart = 'xxx' # constant, 首字母或全部字母大写
+x,y,z = 1,2,3
+a,b,c = 1,'xx',3.21
+}}}
+
+String
+{{{class="brush: ruby"
+s = 'xx cc bb ee ww qq'
+s[3..7]
+s[-6..-1]
+}}}
+
+字符串输入输出
+{{{class="brush: ruby"
+puts 'hello world'
+s = 'xxx'
+puts s
+# #{..}表达式输出运算结果
+puts 'hello, #{s}'
+#{2+2} #==> 4
+#{ARGV[0]}
+puts 'hello' + 'world'
+puts 'hello' << 'world'
+puts 'hello' * 3
+5.times { print 'hello' }
+puts 'hello' + `ruby -v`
+hi = 'hello %s'
+puts hi % 'hebi'
+'%s %s' % ['hello', 'world']
+sprintf('hello, %s', 'hebi') # ==> 'hello hebi'
+printf('hello, %s', 'hebi') # ==> hello hebi
+}}}
+
+re
+{{{class="brush: ruby"
+s = 'xxx bbb kkk'
+s.scan(/\w+/) # ==> ['xxx', 'bbb', 'kkk']
+}}}
+
+系统命令
+{{{class="brush: ruby"
+system "echo 'hello world'"
+system 'echo', 'hello', world'
+}}}
+
+eval
+`eval "puts 'hello world'" # ==> hello world`
+in shell, -e means eval
+`ruby -e "puts 'hello world'"`
+`ruby -e "puts 'hello world'" -e "puts 'hello world'"`
+
+gets
+{{{class="brush: ruby"
+hello = gets
+puts hello
+}}}
+
+def
+{{{class="brush: ruby"
+def func
+    puts 'hello'
+end
+func
+}}}
+
+yield
+{{{class="brush: ruby"
+def func
+    yield # exec codes in the brace
+end
+func { puts 'hello' }
+}}}
+
+each
+{{{class="brush: ruby"
+# array
+# |e| 代表来自数组的元素 
+['hello', 'world'].each { |e| print e }
+}}}
+
+proc
+{{{class="brush: ruby"
+prc = lambda { |name| puts "hello "+name }
+prc.call 'hebi'
+}}}
+
+if
+{{{class="brush: ruby"
+if 1 == 1
+    print 'true'
+elsif 2 == 2
+    print '2'
+else
+    print '3'
+end
+}}}
+
 == ruby.taobao.org ==
 gem is very slow:
 use ruby.taobao.org
@@ -11,9 +129,21 @@ source 'http://ruby.taobao.org'
 
 
 == Gem Install Packets ==
-gem install rails -V # verbose
+sudo gem install rails -V # verbose
 gem install xxx -v 1.1.0 # install a specific version of a ruby gem
 gem # show help
+gem help
 gem list
 gem uninstall xxx
 gem search xxx # search remote
+gem dep rails
+gem update --system
+
+== bundle ==
+bundle show
+
+== Trouble Shooting ==
+can't use gem install on mac:
+
+`ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future sudo gem install GemName # wrong!!`
+`sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install rails -V # yes`

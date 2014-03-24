@@ -1,0 +1,19 @@
+= phpmyadmin =
+
+== install ==
+on mac:
+
+port can install, and it will install it into /opt/local/www
+
+so copy the entire phpmyadmin directory into your site directory(~/Sites/)
+then you will get #202 error:
+{{{class="brush: shell"
+cp config.sample.inc.php config.inc.php
+vi config.inc.php
+}}}
+change
+`$cfg['Servers'][$i]['host'] = 'localhost';`
+to
+`$cfg['Servers'][$i]['host'] = '127.0.0.1';`
+
+if username or passwd is incorrect, you'll get #1045
