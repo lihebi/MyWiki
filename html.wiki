@@ -1,5 +1,6 @@
 = HTML =
-%template lihebi
+[[index|首页]]
+%toc
 
 == Tags ==
 * pre	预格式化的文本。通常保留空格和换行。文本为等宽字体。

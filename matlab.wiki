@@ -1,4 +1,6 @@
 = Matlab =
+[[index|首页]]
+%toc
 
 == Topics ==
 * [[matlab file operate]]

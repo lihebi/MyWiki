@@ -1,4 +1,6 @@
 = Unicode =
+[[index|首页]]
+%toc
 
 This page talks about my comprehension of Unicode use in python.<br>
 

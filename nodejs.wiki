@@ -1,4 +1,7 @@
 = Node.js =
+[[index|首页]]
+
+%toc
 
 [[express]]
 
@@ -7,12 +10,25 @@ PaaS for Node.js
 * Nodester
 
 == Install ==
-{{{class="brush: shell"
-$ yum install nodejs
-}}}
+`$ yum install nodejs`
 
 == Grammar ==
-* http
+=== module ===
+{{{class='brush: js'
+module.paths //若没有指定require文件的相对路径，且不是核心模块，会通过这个路径查找，很慢
+module.exports
+exports.func = function(){}
+var v = require('./xx');
+require.extensions //扩展加载方式
+__filename
+__dirname
+// 下面5个可以使用，是node默认包装的
+// 不能exports = xxx, 因为export是形参
+(function(exports, require, module, __filename, __dirname) {
+    //my file
+});
+}}}
+=== http ===
 {{{class="brush: js"
 var http = require('http');
 http.createServer(function(req, res) {
@@ -37,7 +53,7 @@ http.get(options, function(res){})
 res.statusCode == 200;
 }}}
 
-* filesystem
+=== filesystem ===
 {{{class="brush: js"
 var fs = require('fs');
 fs.readFile('./index.html', function(error, data) {
@@ -45,7 +61,7 @@ fs.readFile('./index.html', function(error, data) {
 });
 }}}
 
-* socket.io
+=== socket.io ===
 {{{class="brush: js"
 var server = http.createServer(function(){}).listen();
 var io = require('socket.io').listen(server);
@@ -59,7 +75,7 @@ io.sockets.on('connection', function (socket) {
 
 == Hello World ==
 a.js
-{{{class="brush: javascript"
+{{{class="brush: js"
 var http = require('http');
 http.createServer(function(req, res) {
 	res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -70,28 +86,49 @@ console.log('Server running at http://localhost:1337');
 `$ node a.js`
 
 == Packet Manager ==
-npm
+=== package.json ===
+* 只能用"
+* ,不能多
+{{{
+name
+description
+version
+keywords = ["xx", "xx"]
+maintainers = [{"name":"Jack", "email":"xx@xx.com", "web":"http://xxx"}, {}, {}]
+contributors
+bugs
+licenses
+repositories
+dependencies
+homepage
+os
+cup
+engine
+builtin
+directories
+implements
+scripts
+}}}
+=== npm ===
 {{{class="brush: shell"
 npm install [packagename]
 npm install -g [packagename] # global install
 npm install # find package.json
 npm docs [modulename]
-npm edit [modulename] // read source code.
+npm edit [modulename] # read source code.
 npm list
 
 # autoload when modified
 npm install -g node-dev
 node-dev app
-}}}
 
-package.json
-{{{class="brush: js"
-{
-	"name": "Name",
-	"version": "0.0.1",
-	"dependences": {
-		"underscore": "~1.2.1"
-	}
-}
-}}}
+# install from local
+npm install <tarball file>
+npm install <tarball url>
+npm install <folder> # contain package.json
 
+# install from non-official source
+npm install underscore --registry=http://registry.url
+# set default source
+npm config set registry http://registry.url
+}}}

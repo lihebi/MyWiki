@@ -1,4 +1,5 @@
 = phpmyadmin =
+%toc
 
 == install ==
 on mac:

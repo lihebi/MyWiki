@@ -1,9 +1,13 @@
 = apache =
+[[index|首页]]
+%toc
 
 == mac ==
+{{{class="brush: shell"
 apachectl -v
 sudo apachectl start/stop/restart # start will enable launch daemon, just what launchctl below does
 
 launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist
 launchctl unload -w /... # -w means permanent
 sudo lsof -i:80 # see what process is listening on the given port
+}}}

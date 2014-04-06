@@ -1,3 +1,46 @@
 = rails =
 
+`rails console # irb with rails env loaded`
 
+== Read ==
+table: tweets
+| id | status | zombie  |
+| 1  | "sss"  | "Bob"   |
+| 2  | "eee"  | "Alice" |
+| 3  | "ccc"  | "Mary"  |
+t = Tweet.find(3)
+==> {id:3, status: "xxx", zombie: "Mary"}
+t[:id]          t.id
+t[:status]      t.status
+t[:zombie]      t.zombie
+
+Tweet.all
+
+== Create ==
+{{{class="brush: ruby"
+t = Tweet.new
+t.status = "xxx"
+t.save
+}}}
+Alternative
+{{{class="brush: ruby"
+t = Tweet.new(
+    status: "xxx"
+)
+t.save
+}}}
+Alternative
+{{{class="brush: ruby"
+Tweet.create(
+    status: "xxx"
+)
+}}}
+
+== Update ==
+t = Tweet.find(3)
+t.zombie = "xxx"
+t.save
+
+== Delete ==
+t = Tweet.find(3)
+t.destroy

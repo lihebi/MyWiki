@@ -1,13 +1,18 @@
 = openvpn =
+[[index|首页]]
+%toc
 
 For Debian7 & ubuntu 12.04
 
-{{https://library.linode.com/networking/openvpn/ubuntu-12.04-precise | origin article}}
+[[https://library.linode.com/networking/openvpn/ubuntu-12.04-precise | origin article]]
 
+{{{class="brush: shell"
 apt-get update
 apt-get upgrade
 apt-get install openvpn
+}}}
 == easy-rsa ==
+{{{class="brush: shell"
 cp -R /usr/share/doc/openvpn/examples/easy-rsa/ /etc/openvpn
 cd /etc/openvpn/easy-rsa/2.0/
 ln -s openssl-1.0.0.cnf openssl.cnf
@@ -18,44 +23,54 @@ ln -s openssl-1.0.0.cnf openssl.cnf
 . /etc/openvpn/easy-rsa/2.0/build-key-server server
 . /etc/openvpn/easy-rsa/2.0/build-key client1 # one user a time
 . /etc/openvpn/easy-rsa/2.0/build-dh
+}}}
 
 == files ==
-ca.crt
-client1.crt
-client1.key
+`ca.crt`
+`client1.crt`
+`client1.key`
+{{{class="brush: shell"
 cd /etc/openvpn/easy-rsa/2.0/keys
 cp ca.crt ca.key dh1024.pem server.crt server.key /etc/openvpn
+}}}
 
 == revoke user ==
+{{{class="brush: shell"
 . /etc/openvpn/easy-rsa/2.0/vars
 . /etc/openvpn/easy-rsa/2.0/revoke-full client1
+}}}
 
 == config ==
+{{{class="brush: shell"
 cd /usr/share/doc/openvpn/examples/sample-config-files
 gunzip -d server.conf.gz
 cp server.conf /etc/openvpn/
 cp client.conf ~/
 cd ~/
+}}}
 
 == ~/client.conf ==
+{{{
 remote example.com 1194
 ca ca.crt
 cert client1.crt
 key client1.key
+}}}
 
 == start service ==
-service openvpn start
+`service openvpn start`
 
 == forward config ==
-/etc/openvpn/server.conf
-push "redirect-gateway def1 bypass-dhcp"
+/etc/openvpn/server.conf:
+`push "redirect-gateway def1 bypass-dhcp"`
 
-/etc/sysctl.conf
-net.ipv4.ip_forward=1
+/etc/sysctl.conf:
+`net.ipv4.ip_forward=1`
 
-echo 1 > /proc/sys/net/ipv4/ip_forward
+`echo 1 > /proc/sys/net/ipv4/ip_forward`
 
 == iptables ==
+{{{class="brush: shell"
 iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -s 10.8.0.0/24 -j ACCEPT
 iptables -A FORWARD -j REJECT
@@ -64,8 +79,10 @@ iptables -A INPUT -i tun+ -j ACCEPT
 iptables -A FORWARD -i tun+ -j ACCEPT
 iptables -A INPUT -i tap+ -j ACCEPT
 iptables -A FORWARD -i tap+ -j ACCEPT
+}}}
 
-/etc/rc.local
+/etc/rc.local:
+{{{
 iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -s 10.8.0.0/24 -j ACCEPT
 iptables -A FORWARD -j REJECT
@@ -76,27 +93,36 @@ iptables -A INPUT -i tap+ -j ACCEPT
 iptables -A FORWARD -i tap+ -j ACCEPT
 
 exit 0
+}}}
 
 == dns ==
-apt-get install dnsmasq resolvconf
+`apt-get install dnsmasq resolvconf`
 
-/etc/dnsmasq.conf
+/etc/dnsmasq.conf:
+{{{
 listen-address=127.0.0.1,10.8.0.1
 bind-interfaces
+}}}
 
-/etc/network/interfaces
+/etc/network/interfaces:
+{{{
 auto eth0
 iface eth0 inet dhcp
 
 dns-search members.linode.com
 dns-nameservers 97.107.133.4 207.192.69.4 207.192.69.5
+}}}
 
-/etc/rc.local
+/etc/rc.local:
+{{{
 /etc/init.d/dnsmasq restart
 exit 0
+}}}
 
-/etc/openvpn/server.conf
+/etc/openvpn/server.conf:
+{{{
 push "dhcp-option DNS 10.8.0.1"
+}}}
 
 reboot
 

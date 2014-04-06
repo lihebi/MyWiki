@@ -1,4 +1,6 @@
 = Github Pages =
+[[index|首页]]
+%toc
 
 
 == Personal Page ==

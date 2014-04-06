@@ -1,5 +1,6 @@
 = Javascript =
-
+[[index|首页]]
+%toc
 == Libs ==
 * [[sly]]: one-directional scrolling with item based navigation support
 * jquery.easing: 提供各种动画效果。
@@ -7,7 +8,6 @@
 * spin: create a spin(wait for load)
 * [[SmoothScroll]]
 * viewport
-* [[JQuery]]
 
 == TIPS ==
 * === 全等，值和类型
@@ -31,8 +31,8 @@ $(window).width()
 
 
 
-== Basic ==
-* variable
+== 语法 ==
+=== 变量 ===
 {{{class="brush: js"
 var x; //x=undefined
 x = 5;
@@ -48,7 +48,7 @@ var z = new String; //声明新变量时顺便声明类型。String, Number, Boo
 globalVar = "global"; //赋值给未声明的变量，该变量被自动作为全局变量声明，即使它在函数内执行。
 }}}
 
-* array
+=== 数组 ===
 {{{class="brush: js"
 var array = new Array();
 array[0] = "aaa";
@@ -61,7 +61,7 @@ var array3 = ["aaa", "bbb", "ccc"];
 array.length
 }}}
 
-* object
+=== 对象 ===
 {{{class="brush: js"
 var obj = {firstname: "Hebi", lastname: "Li", id: 123};
 obj.lastname;
@@ -86,7 +86,7 @@ for (x in person)
 }
 }}}
 
-* string
+=== 字符串 ===
 {{{class="brush: js"
 var s = "lalala";
 s.length;
@@ -102,7 +102,7 @@ var s3 = s1+" "+s2; //字符串可以直接加
 //"5"+5 ===> "55"
 }}}
 
-* try catch throw
+=== try catch throw ===
 {{{class="brush: js"
 try {
 	if (xx) throw "err1"; //异常可以是string, number, boolean, object
@@ -114,68 +114,34 @@ try {
 
 == HTML Related ==
 
-* document.write
-{{{class="brush: html"
-<script type="text/javascript" src="xxx.js"></script> //已经不必加type了
-<script type="text/javascript">
-document.write("<h1>xxx</h1>"); //只能在html输出流中使用。若文档已经加载后使用（如在函数中），会覆盖整个文档。
-</script>
-}}}
-
-* button
-* onclick
-任何东西都可以onclick
-{{{class="brush: html"
-<button type="button" onclick="alert('xxx')">Button</button>
-}}}
-
-* function
-* getElementById
-* innerHTML
 {{{class="brush: html"
 <p id="lihebi"> xxx </p>
 <script type="text/javascript">
-function func()
-{
-	x = document.getElementById("lihebi");
-	x.innerHTML = "yyy";
+document.write("<h1>xxx</h1>"); //只能在html输出流中使用。若文档已经加载后使用（如在函数中），会覆盖整个文档。
+function func() {
+    //getElementById
+    x = document.getElementById("lihebi");
+    //innerHTML
+    x.innerHTML = "yyy";
+    //语法： element.style.[property]
+    x.style.color = "#ff0000";
+}
+function func2() {
+    element = document.getElementById("lihebi");
+    //element.[attribute]来操作元素属性。src是一个属性。src是字符串，而match是字符串的方法。
+    if (element.src.match("img1")) //部分匹配即可
+        element.src="theimg2.gif";
+    else
+        element.src="theimg1.gif";
 }
 </script>
 <button type="button" onclick="func()">Button</button>
-}}}
-
-* image.onclick
-* element.src (match, change)
-element.[attribute]来操作元素属性。src是一个属性。src是字符串，而match是字符串的方法。
-{{{class="brush: html"
-<script type="text/javascript">
-function func()
-{
-	element = document.getElementById("lihebi");
-	if (element.src.match("img1")) //部分匹配即可
-		element.src="theimg2.gif";
-	else
-		element.src="theimg1.gif";
-}
-</script>
+<!-- 任何东西都可以onclick -->
+<button type="button" onclick="alert('xxx')">Button</button>
 <img id="lihebi" onclick="func()" src="theimg1.gif">
 }}}
 
-* element.style
-语法： element.style.[property]
-{{{class="brush: html"
-<script type="text/javascript">
-function func()
-{
-	x = document.getElementById("lihebi");
-	x.style.color = "#ff0000";
-}
-</script>
-}}}
-see also: [[css]]
-
-* input框
-* element.value (HTMLInputElement.value)
+=== element.value ===
 {{{class="brush: html"
 <input id="lihebi" type="text"/>
 <script type="text/javascript">
@@ -187,7 +153,7 @@ function func()
 </script>
 }}}
 
-* getElementByTagName
+=== getElementByTagName ===
 {{{class="brush:html"
 <div id="lihebi">
 <p>111</p>

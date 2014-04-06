@@ -1,0 +1,12 @@
+= php =
+
+
+== pear & pecl ==
+
+sudo php /usr/lib/php/install-pear-nozlib.phar
+edit /etc/php.ini:
+`include_path` add `/opt/local/lib/php/pear`(found at the output of `sudo php /usr/lib/.../xx.phar`
+
+sudo pear channel-update pear.php.net
+sudo pecl channel-update pecl.php.net
+sudo pear upgrade-all

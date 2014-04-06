@@ -1,0 +1,8 @@
+= launchctl =
+
+service manager for mac
+
+launchctl load
+launchctl unload
+launchctl start
+launchctl stop

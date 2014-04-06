@@ -1,4 +1,6 @@
 = CSS =
+[[index|首页]]
+%toc
 
 == Usage ==
 {{{class="brush: html"

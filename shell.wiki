@@ -1,4 +1,6 @@
 = Shell =
+[[index|首页]]
+%toc
 
 
 == echo ==

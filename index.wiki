@@ -1,37 +1,39 @@
-
-= Hebi's Personal Wiki =
 %title Hebi's wiki
 %template lihebi
-[[moto]]
+= 杂 =
+* [[moto]]
+* [[todo]]
 
-[[todo]]
-
-== WebDesign ==
+= 前端 =
 * [[javascript]]
-* [[nodejs]]
-* [[jekyll]]
+* [[jquery]]
 * [[css]]
 * [[html]]
 * [[gh-pages]]
+* [[jekyll]]
 * [[bootstrap]]
-* [[apache]]
 
-== Coding ==
+= 后端 =
+* [[nodejs]]
+* [[php]]
+* [[apache]]
 * [[sql]]
+
+= Coding =
 * [[python]]
 * [[c]]
 * [[matlab]]
-* [[github]]
 * [[shell]]
 * [[ruby]]
+* [[re]]
 
-== Linux ==
+= Linux =
 * [[mac]]
 * [[vim]]
 * [[linux]]
-* [[unicode]]
-* [[lamp]]
-* [[shell]]
 
-== Software ==
-* [[chromium]]
+= 未分类 =
+* [[github]]
+* [[unicode]]
+
+%toc

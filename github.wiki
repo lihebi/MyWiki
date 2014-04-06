@@ -1,4 +1,6 @@
 = Git =
+[[index|首页]]
+%toc
 
 == Files ==
 .gitignore:

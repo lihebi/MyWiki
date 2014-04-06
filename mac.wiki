@@ -1,4 +1,6 @@
 = mac =
+[[index|首页]]
+%toc
 
 == basic ==
 ⌃       控制代码
@@ -11,6 +13,12 @@ open ~ # open finder
 to use locate, first type:
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 open -a Google\ Chrome index.html
+port select --set ipython ipython27
+
+== 打开root用户 ==
+open -a "Directory Utility"
+打开目录使用工具，点锁，点编辑，开启root用户
+
 
 [[macport]]
 

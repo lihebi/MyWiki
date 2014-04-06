@@ -1,4 +1,6 @@
 = Bootstrap =
+[[index|首页]]
+%toc
 
 == Usage ==
 put fonts in the right place(../fonts/gly...)

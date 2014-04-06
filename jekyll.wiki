@@ -1,4 +1,6 @@
 = Jekyll =
+[[index|首页]]
+%toc
 Transform your plain text into static blog-aware websites and blogs.
 
 == Install ==

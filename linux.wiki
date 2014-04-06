@@ -1,4 +1,6 @@
 = Linux =
+[[index|首页]]
+%toc
 
 == Tmp ==
 mac address: 4f-d3-56-8a-3f-ee

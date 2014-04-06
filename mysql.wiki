@@ -1,4 +1,5 @@
 = MySQL =
+%toc
 
 === Install ===
 Just use pacman.

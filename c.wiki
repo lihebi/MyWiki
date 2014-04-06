@@ -1,4 +1,5 @@
 = C programming language =
+[[index|首页]]
 * [[makefile]]
 
 == Libraries ==

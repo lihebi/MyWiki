@@ -1,8 +1,17 @@
 = TODO =
+* home 页面显示自己租的车，和其拥有者
+* 完成订单系统，让用户能关联车
+* 用户要能查看自己当前车，由车可查到谁在用。
+* 用户能查看自己过去的车
+* 用户能查看过去的评论
+* 用户可以收藏车
+
 == Do it now ==
 login as guest, test apache
 build my wiki using mediawiki/tikiwiki, and manage my wiki!!
 google-prettify
+mplayer osd
+iterm for vim to use mouse
 
 == zuchefeng ==
 * 汽车数据库

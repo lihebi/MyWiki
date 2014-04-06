@@ -1,4 +1,16 @@
 = vim =
+[[index|首页]]
+%toc
+
+== plugins ==
+=== indentline ===
+=== nerdtree ===
+=== vimwiki ===
+=== pathogen ===
+=== vundle ===
+=== vim-jade ===
+=== vim-sensible ===
+=== molokai ===
 
 == Syntax ==
 syn keyword xType function def int long

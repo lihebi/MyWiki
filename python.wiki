@@ -1,4 +1,6 @@
 = Python =
+[[index|首页]]
+%toc
 
 l = sorted(d.items(), key=lambda d: d[1])	# 按value排序，返回list
 
